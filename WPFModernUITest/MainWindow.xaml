@@ -90,6 +90,8 @@
                 <local:Converter x:Name="ConverterUI" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,10"
                                  Visibility="Hidden"/>
                 
+                
+                
             </Grid>
         </ui:NavigationView>
     </Grid>
