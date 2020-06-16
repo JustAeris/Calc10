@@ -514,33 +514,32 @@ namespace WPFModernUITest
         public double VolumeConversion(int index1, int index2, double num)
         {
             if (index1 == 0)
-                num = num * 1000;
+                num = num / 1000;
             if (index1 == 1)
-                num = num * 1000;
+                num = num / 1000;
             if (index1 == 3)
-                num = num / 1000;
-            if (index1 == 4)
-                num = num / 4.546;
-            if (index1 == 5)
-                num = num * 61.024;
-            if (index1 == 6)
-                num = num * 28.317;
-
-            if (index2 == 0)
-                num = num / 1000;
-            if (index2 == 1)
-                num = num / 1000;
-            if (index2 == 3)
                 num = num * 1000;
-            if (index2 == 4)
+            if (index1 == 4)
                 num = num * 4.546;
-            if (index2 == 5)
+            if (index1 == 5)
                 num = num / 61.024;
-            if (index2 == 6)
+            if (index1 == 6)
                 num = num / 28.317;
 
-            return num;
+            if (index2 == 0)
+                num = num * 1000;
+            if (index2 == 1)
+                num = num * 1000;
+            if (index2 == 3)
+                num = num / 1000;
+            if (index2 == 4)
+                num = num / 4.546;
+            if (index2 == 5)
+                num = num * 61.024;
+            if (index2 == 6)
+                num = num * 28.317;
 
+            return num;
         }
     }
 }
