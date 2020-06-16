@@ -1,5 +1,5 @@
 # Calc10
-My first calculator, coded in C# and WPF. Made with happiness ( and pain too).
+My first calculator, coded in C# and WPF. Made with happiness (and pain too).
  
 
 ### Including
