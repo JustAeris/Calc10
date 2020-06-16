@@ -38,7 +38,7 @@ namespace WPFModernUITest
         string[] SurfaceList = { "Square Millimetre", "Square Centimetre", "Square Metre", "Hectare", "Square Kilometre", "Square Inch", "Square Foot", "Square Yard", "Square Mile", };
         string[] TemperatureList = { "Celsuis", "Fahrenheit", "Kelvin" };
         string[] VolumeList = { "Millilitre", "Cubic Centimetre", "Litre", "Cubic Metre", "Gallon", "Cubic Inch", "Cubic Foot" };
-        string[] WeightList = { "Milligram", "Centigram", "Decigram", "Gram", "Decagram", "Hectogram", "Kilogram", "Tonne", };
+        string[] WeightList = { "Milligram", "Centigram", "Decigram", "Gram", "Decagram", "Hectogram", "Kilogram", "Tonne", "Ounce", "Pound", "Ton (US)"};
 
         //Invert Button
         private void InvertButton_Click(object sender, RoutedEventArgs e)
@@ -88,8 +88,11 @@ namespace WPFModernUITest
                 if (unitListComboBox.SelectedIndex == 9)
                     toUnitTextBox.Text = Convert.ToString(TemperatureConversion(fromUnitComboBox.SelectedIndex, toUnitComboBox.SelectedIndex, Convert.ToDouble(fromUnitTextBox.Text)));
 
-                if (unitListComboBox.SelectedIndex == 9)
-                    toUnitTextBox.Text = Convert.ToString(TemperatureConversion(fromUnitComboBox.SelectedIndex, toUnitComboBox.SelectedIndex, Convert.ToDouble(fromUnitTextBox.Text)));
+                if (unitListComboBox.SelectedIndex == 10)
+                    toUnitTextBox.Text = Convert.ToString(VolumeConversion(fromUnitComboBox.SelectedIndex, toUnitComboBox.SelectedIndex, Convert.ToDouble(fromUnitTextBox.Text)));
+
+                if (unitListComboBox.SelectedIndex == 11)
+                    toUnitTextBox.Text = Convert.ToString(WeightConversion(fromUnitComboBox.SelectedIndex, toUnitComboBox.SelectedIndex, Convert.ToDouble(fromUnitTextBox.Text)));
             }
             else
                 toUnitTextBox.Text = "";
@@ -184,6 +187,9 @@ namespace WPFModernUITest
 
                 if (unitListComboBox.SelectedIndex == 10)
                     toUnitTextBox.Text = Convert.ToString(VolumeConversion(fromUnitComboBox.SelectedIndex, toUnitComboBox.SelectedIndex, Convert.ToDouble(fromUnitTextBox.Text)));
+
+                if (unitListComboBox.SelectedIndex == 11)
+                    toUnitTextBox.Text = Convert.ToString(WeightConversion(fromUnitComboBox.SelectedIndex, toUnitComboBox.SelectedIndex, Convert.ToDouble(fromUnitTextBox.Text)));
             }
             else
                 toUnitTextBox.Text = "";
@@ -538,6 +544,54 @@ namespace WPFModernUITest
                 num = num * 61.024;
             if (index2 == 6)
                 num = num * 28.317;
+
+            return num;
+        }
+
+        //Weight Conversion
+        public double WeightConversion(int index1, int index2, double num)
+        {
+            if (index1 == 0)
+                num = num * 1000;
+            if (index1 == 1)
+                num = num * 100;
+            if (index1 == 2)
+                num = num * 10;
+            if (index1 == 4)
+                num = num / 10;
+            if (index1 == 5)
+                num = num / 100;
+            if (index1 == 6)
+                num = num / 1000;
+            if (index1 == 7)
+                num = num / 1000000;
+            if (index1 == 8)
+                num = num * 28.35;
+            if (index1 == 9)
+                num = num * 435.592;
+            if (index1 == 10)
+                num = num * 907185;
+
+            if (index2 == 0)
+                num = num / 1000;
+            if (index2 == 1)
+                num = num / 100;
+            if (index2 == 2)
+                num = num / 10;
+            if (index2 == 4)
+                num = num * 10;
+            if (index2 == 5)
+                num = num * 100;
+            if (index2 == 6)
+                num = num * 1000;
+            if (index2 == 7)
+                num = num * 1000000;
+            if (index2 == 8)
+                num = num / 28.35;
+            if (index2 == 9)
+                num = num / 435.592;
+            if (index2 == 10)
+                num = num / 907185;
 
             return num;
         }
