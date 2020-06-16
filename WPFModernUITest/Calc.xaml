@@ -1,0 +1,61 @@
+﻿<UserControl x:Class="WPFModernUITest.Calc"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPFModernUITest"
+             mc:Ignorable="d"
+             d:DesignHeight="450" d:DesignWidth="800" x:Name="CalcUI">
+    <Grid>
+
+        
+
+            <StackPanel Margin="20,0">
+                <TextBlock x:Name="PendingOperation" Text=" " Grid.Column="1" Grid.Row="2" FontSize="20" 
+                   Margin="0,0,0,15" />
+
+                <TextBox Grid.Column="1" Grid.Row="3" IsReadOnly="True" Grid.ColumnSpan="2" x:Name="MainTextBox" 
+                         MaxLength="12" TextOptions.TextHintingMode="Animated" TextAlignment="Right" FontSize="20" 
+                         TextChanged="MainTextBox_TextChanged" Width="240" HorizontalAlignment="Left"/>
+
+
+                <StackPanel Grid.Row="4" Grid.Column="1" Orientation="Horizontal" Grid.ColumnSpan="2">
+                    <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Vertical" Margin="0,0,0,0">
+                        <Button x:Name="Button7" Content="_7" Width="50" Margin="0,10,10,10" Click="Button7_Click" />
+                        <Button x:Name="Button4" Content="_4" Width="50" Margin="0,0,10,10" Click="Button4_Click"/>
+                        <Button x:Name="Button1" Content="_1" Width="50" Margin="0,0,10,10" Click="Button1_Click"/>
+                        <Button x:Name="ButtonDot" Content="_." Width="50" Margin="0,0,10,10" Click="ButtonDot_Click"/>
+                        <Button x:Name="ButtonC" Content="_C" Width="50" Margin="0,10,10,10" Click="ButtonC_Click"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Vertical">
+                        <Button x:Name="Button8" Content="_8" Width="50" Margin="0,10,10,10" Click="Button8_Click"/>
+                        <Button x:Name="Button5" Content="_5" Width="50" Margin="0,0,10,10" Click="Button5_Click"/>
+                        <Button x:Name="Button2" Content="_2" Width="50" Margin="0,0,10,10" Click="Button2_Click"/>
+                        <Button x:Name="Button0" Content="_0" Width="50" Margin="0,0,10,10" Click="Button0_Click"/>
+                        <Button x:Name="ButtonCE" Content="C_E" Width="50" Margin="0,10,10,10" Click="ButtonCE_Click"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Vertical">
+                        <Button x:Name="Button9" Content="_9" Width="50" Margin="0,10,20,10" Click="Button9_Click"/>
+                        <Button x:Name="Button6" Content="_6" Width="50" Margin="0,0,20,10" Click="Button6_Click"/>
+                        <Button x:Name="Button3" Content="_3" Width="50" Margin="0,0,20,10" Click="Button3_Click"/>
+                        <Button x:Name="Button00" Content="00" Width="50" Margin="0,0,20,10" Click="Button00_Click"/>
+                        <Button x:Name="ButtonEqual" Content="_=" Width="50" Margin="0,10,10,10" Click="ButtonEqual_Click" 
+                                KeyUp="ButtonEqual_KeyUp" Focusable="True"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Vertical">
+                        <Button x:Name="ButtonAdd" Content="_+" Width="50" Margin="0,10,20,10" Click="ButtonAdd_Click"/>
+                        <Button x:Name="ButtonMinus" Content="_-" Width="50" Margin="0,0,20,10" Click="ButtonMinus_Click"/>
+                        <Button x:Name="ButtonTimes" Content="_*" Width="50" Margin="0,0,20,10" Click="ButtonTimes_Click"/>
+                        <Button x:Name="ButtonDivide" Content="_/" Width="50" Margin="0,0,20,10" Click="ButtonDivide_Click"/>
+                    </StackPanel>
+
+                </StackPanel>
+            </StackPanel>
+            
+        
+        
+
+
+    </Grid>
+</UserControl>
