@@ -18,6 +18,8 @@ using ModernWpf.Navigation;
 using System.Net;
 using System.IO;
 using ModernWpf;
+using System.Threading;
+using System.Timers;
 
 namespace WPFModernUITest
 {
@@ -30,6 +32,7 @@ namespace WPFModernUITest
         {
             InitializeComponent();
         }
+        //Method to check for Internet Connection
         public static bool CheckForInternetConnection()
         {
             try
@@ -41,7 +44,7 @@ namespace WPFModernUITest
             catch
             { return false; }
         }
-
+        //Method for reading files 
         static string ReadSpecificLine(string filePath, int lineNumber)
         {
             string content = null;
@@ -72,8 +75,7 @@ namespace WPFModernUITest
             return content;
 
         }
-
-        //Auto personalization
+        //Auto Personalization And More On StartUp
         private void MainWindows_Loaded(object sender, RoutedEventArgs e)
         {
             if (ReadSpecificLine("Settings.ini", 2) == "null")
@@ -95,14 +97,13 @@ namespace WPFModernUITest
                 ThemeSettingsUI.LightTheme.IsChecked = true;
             }
 
-
             if (!string.IsNullOrEmpty(ReadSpecificLine("Settings.ini", 4)))
             {
                 Color color = (Color)ColorConverter.ConvertFromString(ReadSpecificLine("Settings.ini", 4));
                 ThemeManager.Current.AccentColor = color;
             }
 
-            if (ThemeManager.Current.ApplicationTheme == ApplicationTheme.Dark)
+            if (ThemeManager.Current.ActualApplicationTheme == ApplicationTheme.Dark)
             {
                 ConverterUI.TextBlock1.Foreground = Brushes.White;
                 ConverterUI.TextBlock2.Foreground = Brushes.White;
@@ -114,7 +115,7 @@ namespace WPFModernUITest
                 CurrencyUI.TextBox4.Foreground = Brushes.White;
                 CustomHeader.Foreground = Brushes.White;
             }
-            if (ThemeManager.Current.ApplicationTheme == ApplicationTheme.Light)
+            if (ThemeManager.Current.ActualApplicationTheme == ApplicationTheme.Light)
             {
                 ConverterUI.TextBlock1.Foreground = Brushes.Black;
                 ConverterUI.TextBlock2.Foreground = Brushes.Black;
@@ -126,13 +127,9 @@ namespace WPFModernUITest
                 CurrencyUI.TextBox4.Foreground = Brushes.Black;
                 CustomHeader.Foreground = Brushes.Black;
             }
-            NavView.SelectedItem = "ModernWpf.Controls.NavigationViewItem: Calculator";
         }
 
-
-
-
-
+        //Navigation View Management
         int SelectedIndex = 0;
         private void NavigationView_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
         {
@@ -201,22 +198,15 @@ namespace WPFModernUITest
 
             }
 
-            MainWindow mainWindow = new MainWindow();
-
         }
 
 
-        
-
-        public static MainWindow C1;
-
-        void Awake()
+        //Set color of text depending on the theme
+        private async void ThemeSettingsUI_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            C1 = this;
-        }
-        public void ChangeTextColor()
-        {
-            if (ThemeManager.Current.ApplicationTheme == ApplicationTheme.Dark)
+            await Task.Delay(50);
+
+            if (ThemeManager.Current.ActualApplicationTheme == ApplicationTheme.Dark)
             {
                 ConverterUI.TextBlock1.Foreground = Brushes.White;
                 ConverterUI.TextBlock2.Foreground = Brushes.White;
@@ -228,7 +218,7 @@ namespace WPFModernUITest
                 CurrencyUI.TextBox4.Foreground = Brushes.White;
                 CustomHeader.Foreground = Brushes.White;
             }
-            if (ThemeManager.Current.ApplicationTheme == ApplicationTheme.Light)
+            if (ThemeManager.Current.ActualApplicationTheme == ApplicationTheme.Light)
             {
                 ConverterUI.TextBlock1.Foreground = Brushes.Black;
                 ConverterUI.TextBlock2.Foreground = Brushes.Black;
@@ -241,6 +231,5 @@ namespace WPFModernUITest
                 CustomHeader.Foreground = Brushes.Black;
             }
         }
-
     }
 }

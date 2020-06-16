@@ -15,12 +15,13 @@
     Background="{DynamicResource SystemControlPageBackgroundChromeMediumLowBrush}"
     ui:ThemeManager.RequestedTheme="Default"
     x:Name="MainWindows" Loaded="MainWindows_Loaded"
-    ui:TitleBar.IsBackButtonVisible="True">
+    ui:TitleBar.IsBackButtonVisible="True"
+    >
 
 
-    <Grid x:Name="MainBackGround">
-        
-        
+    <Grid>
+
+
 
         <ui:NavigationView
             Grid.Column="0"
@@ -81,7 +82,7 @@
                             Visibility="Visible" Margin="0,10,0,0"/>
 
                 <local:Settings HorizontalAlignment="Left" x:Name="ThemeSettingsUI" Visibility="Hidden" 
-                                VerticalAlignment="Top" Margin="5,10" />
+                                VerticalAlignment="Top" Margin="5,10" PreviewMouseLeftButtonUp="ThemeSettingsUI_PreviewMouseLeftButtonUp"/>
 
                 <local:Currency x:Name="CurrencyUI" HorizontalAlignment="Center" VerticalAlignment="Center" 
                                 Margin="5" Visibility="Hidden"/>

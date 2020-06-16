@@ -33,7 +33,6 @@ namespace WPFModernUITest
         {
             ThemeManager.Current.ApplicationTheme = ApplicationTheme.Dark;
             SaveSettings();
-            MainWindow.C1.CustomHeader.Foreground = Brushes.White;
         }
 
         //Light Theme Button
@@ -41,7 +40,6 @@ namespace WPFModernUITest
         {
             ThemeManager.Current.ApplicationTheme = ApplicationTheme.Light;
             SaveSettings();
-            MainWindow.C1.CustomHeader.Foreground = Brushes.Black;
         }
 
         //Default Button Click
@@ -49,17 +47,15 @@ namespace WPFModernUITest
         {
             ThemeManager.Current.ApplicationTheme = null;
             SaveSettings();
-            MainWindow.C1.ChangeTextColor();
         }
 
-        //AutoSave Settings
-        
-
+        //Save settings on close of flyout
         private void AccentColorFlyout_Closed(object sender, object e)
         {
             SaveSettings();
         }
 
+        //Save Settings Method
         public void SaveSettings()
         {
             if (SettingsUIUC.Visibility == Visibility.Visible)

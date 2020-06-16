@@ -20,25 +20,27 @@ namespace WPFModernUITest
     /// </summary>
     public partial class Converter : UserControl
     {
-        string[] AngleList = { "Degrees", "Radians", "Grades" };
-        string[] DataList = { "Bits", "Octet", "KiloBit", "KiloOctet / KiloByte", "MegaBit", "MegaOctet / MegaByte", "GigaBit", "GigaOctet / GigaByte", 
-            "TeraBit", "TeraOctet / TeraByte", "PetaBit", "PetaOctet / PetaByte", "ExaBit", "ExaOctet / ExaByte", "ZettaBit", "ZettaOctet / ZettaByte", "YottaBit", "YottaOctet / YottaByte", };
-        string[] EnergyList = { "Joule", "KiloJoule", "Food Calorie (Kcal)" };
-        string[] TimeList = { "MicroSecond", "MilliSecond", "Second", "Minute", "Hour", "Day", "Week", "Month", "Year" };
-        string[] LengthList = { "NanoMeter", "MicroMeter", "MilliMeter", "CentiMeter" ,"Meter", "KiloMeter"};
-        string[] PowerList = { "Watt", "KiloWatt" };
-        string[] PressureList = { "Atmosphere", "Bar", "Pascal" };
-        string[] SpeedList = { "CentiMeter per Second", "Meter per Second", "KiloMeter per Hour", "Mach"};
-        string[] SurfaceList = { "Square MilliMeter", "Square CentiMeter", "Square Meter", "Hectare", "Square KiloMeter", };
-        string[] TemperatureList = { "Celsuis", "Fahrenheit", "Kelvin" };
-        string[] VolumeList = { "MilliMeter", "Cubic CentiMeter", "Liter", "Cubic Meter" };
-        string[] WeightList = { "MilliGram", "CentiGram", "DeciGram", "Gram", "DecaGram", "HectoGram", "KiloGram", "Tonne", };
-
         public Converter()
         {
             InitializeComponent();
         }
 
+        //Declaring all the arrays
+        string[] AngleList = { "Degrees", "Radians", "Grades" };
+        string[] DataList = { "Bits", "Octet", "Kilobit", "Kilo-octet / Kilobyte", "Megabit", "Megaoctet / Megabyte", "Gigabit", "Gigaoctet / Gigabyte", 
+            "Terabit", "Teraoctet / Terabyte", "Petabit", "Petaoctet / Petabyte", "Exabit", "Exaoctet / Exabyte", "Zettabit", "Zettaoctet / Zettabyte", "Yottabit", "Yottaoctet / Yottabyte", };
+        string[] EnergyList = { "Joule", "Kilojoule", "Food Calorie (Kcal)" };
+        string[] TimeList = { "Microsecond", "Millisecond", "Second", "Minute", "Hour", "Day", "Week", "Month", "Year" };
+        string[] LengthList = { "Nanometre", "Micrometre", "Millimetre", "Centimetre" ,"Metre", "Kilometre", "Inches", "Foot", "Yard", "Mile"};
+        string[] PowerList = { "Watt", "Kilowatt" };
+        string[] PressureList = { "Atmosphere", "Bar", "Pascal" };
+        string[] SpeedList = { "Centimetre per Second", "Metre per Second", "Kilometre per Hour", "Miles per Hour", "Mach"};
+        string[] SurfaceList = { "Square Millimetre", "Square Centimetre", "Square Metre", "Hectare", "Square Kilometre", "Square Inch", "Square Foot", "Square Yard", "Square Mile", };
+        string[] TemperatureList = { "Celsuis", "Fahrenheit", "Kelvin" };
+        string[] VolumeList = { "Millilitre", "Cubic Centimetre", "Litre", "Cubic Metre", "Gallon", "Cubic Inch", "Cubic Foot" };
+        string[] WeightList = { "Milligram", "Centigram", "Decigram", "Gram", "Decagram", "Hectogram", "Kilogram", "Tonne", };
+
+        //Invert Button
         private void InvertButton_Click(object sender, RoutedEventArgs e)
         {
             int _temp = toUnitComboBox.SelectedIndex;
@@ -51,7 +53,7 @@ namespace WPFModernUITest
             fromUnitTextBox.Text = _temp2;
 
         }
-
+        //Refresh Button
         private void RefreshButton_Click(object sender, RoutedEventArgs e)
         {
             if (!string.IsNullOrEmpty(fromUnitTextBox.Text))
@@ -65,6 +67,11 @@ namespace WPFModernUITest
                 if (unitListComboBox.SelectedIndex == 2)
                     toUnitTextBox.Text = Convert.ToString(EnergyConversion(fromUnitComboBox.SelectedIndex, toUnitComboBox.SelectedIndex, Convert.ToDouble(fromUnitTextBox.Text)));
 
+                if (unitListComboBox.SelectedIndex == 3)
+                    toUnitTextBox.Text = Convert.ToString(TimeConversion(fromUnitComboBox.SelectedIndex, toUnitComboBox.SelectedIndex, Convert.ToDouble(fromUnitTextBox.Text)));
+
+                if (unitListComboBox.SelectedIndex == 4)
+                    toUnitTextBox.Text = Convert.ToString(LengthConversion(fromUnitComboBox.SelectedIndex, toUnitComboBox.SelectedIndex, Convert.ToDouble(fromUnitTextBox.Text)));
 
                 if (unitListComboBox.SelectedIndex == 5)
                     toUnitTextBox.Text = Convert.ToString(PowerConversion(fromUnitComboBox.SelectedIndex, toUnitComboBox.SelectedIndex, Convert.ToDouble(fromUnitTextBox.Text)));
@@ -75,21 +82,27 @@ namespace WPFModernUITest
                 if (unitListComboBox.SelectedIndex == 7)
                     toUnitTextBox.Text = Convert.ToString(SpeedConversion(fromUnitComboBox.SelectedIndex, toUnitComboBox.SelectedIndex, Convert.ToDouble(fromUnitTextBox.Text)));
 
+                if (unitListComboBox.SelectedIndex == 8)
+                    toUnitTextBox.Text = Convert.ToString(SurfaceConversion(fromUnitComboBox.SelectedIndex, toUnitComboBox.SelectedIndex, Convert.ToDouble(fromUnitTextBox.Text)));
+
                 if (unitListComboBox.SelectedIndex == 9)
                     toUnitTextBox.Text = Convert.ToString(TemperatureConversion(fromUnitComboBox.SelectedIndex, toUnitComboBox.SelectedIndex, Convert.ToDouble(fromUnitTextBox.Text)));
 
-
+                if (unitListComboBox.SelectedIndex == 9)
+                    toUnitTextBox.Text = Convert.ToString(TemperatureConversion(fromUnitComboBox.SelectedIndex, toUnitComboBox.SelectedIndex, Convert.ToDouble(fromUnitTextBox.Text)));
             }
             else
                 toUnitTextBox.Text = "";
             RefreshButton.IsEnabled = false;
         }
 
+        //Auto Renable Refresh Button
         private void fromUnitComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             RefreshButton.IsEnabled = true;
         }
 
+        //Auto List Units Depending on the unit type
         private void unitListComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (unitListComboBox.SelectedIndex == 0)
@@ -133,6 +146,8 @@ namespace WPFModernUITest
             RefreshButton.IsEnabled = true;
 
         }
+
+        //Conversion TextBox
         private void fromUnitTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             if (!string.IsNullOrEmpty(fromUnitTextBox.Text))
@@ -149,6 +164,9 @@ namespace WPFModernUITest
                 if (unitListComboBox.SelectedIndex == 3)
                     toUnitTextBox.Text = Convert.ToString(TimeConversion(fromUnitComboBox.SelectedIndex, toUnitComboBox.SelectedIndex, Convert.ToDouble(fromUnitTextBox.Text)));
 
+                if (unitListComboBox.SelectedIndex == 4)
+                    toUnitTextBox.Text = Convert.ToString(LengthConversion(fromUnitComboBox.SelectedIndex, toUnitComboBox.SelectedIndex, Convert.ToDouble(fromUnitTextBox.Text)));
+
                 if (unitListComboBox.SelectedIndex == 5)
                     toUnitTextBox.Text = Convert.ToString(PowerConversion(fromUnitComboBox.SelectedIndex, toUnitComboBox.SelectedIndex, Convert.ToDouble(fromUnitTextBox.Text)));
 
@@ -158,10 +176,14 @@ namespace WPFModernUITest
                 if (unitListComboBox.SelectedIndex == 7)
                     toUnitTextBox.Text = Convert.ToString(SpeedConversion(fromUnitComboBox.SelectedIndex, toUnitComboBox.SelectedIndex, Convert.ToDouble(fromUnitTextBox.Text)));
 
+                if (unitListComboBox.SelectedIndex == 8)
+                    toUnitTextBox.Text = Convert.ToString(SurfaceConversion(fromUnitComboBox.SelectedIndex, toUnitComboBox.SelectedIndex, Convert.ToDouble(fromUnitTextBox.Text)));
+
                 if (unitListComboBox.SelectedIndex == 9)
                     toUnitTextBox.Text = Convert.ToString(TemperatureConversion(fromUnitComboBox.SelectedIndex, toUnitComboBox.SelectedIndex, Convert.ToDouble(fromUnitTextBox.Text)));
 
-                
+                if (unitListComboBox.SelectedIndex == 10)
+                    toUnitTextBox.Text = Convert.ToString(VolumeConversion(fromUnitComboBox.SelectedIndex, toUnitComboBox.SelectedIndex, Convert.ToDouble(fromUnitTextBox.Text)));
             }
             else
                 toUnitTextBox.Text = "";
@@ -169,7 +191,7 @@ namespace WPFModernUITest
         }
 
 
-
+        //Angle Conversion
         public double AngleConversion(int index1, int index2, double num)
         {
             if (index1 == 0)
@@ -201,6 +223,7 @@ namespace WPFModernUITest
             return num;
         }
 
+        //Data Conversion
         public double DataConversion(int index1, int index2, double num)
         {
             if (index1 == 2 || index1 == 3)
@@ -245,6 +268,7 @@ namespace WPFModernUITest
             return num;
         }
 
+        //Time Conversion
         public double TimeConversion(int index1, int index2, double num)
         {
             if (index1 == 0)
@@ -284,14 +308,51 @@ namespace WPFModernUITest
             return num;
         }
 
+        //Length Conversion
         public double LengthConversion(int index1, int index2, double num)
         {
+            if (index1 == 0)
+                num = num / 1000000000;
+            if (index1 == 1)
+                num = num / 1000000;
+            if (index1 == 2)
+                num = num / 1000;
+            if (index1 == 3)
+                num = num / 100;
+            if (index1 == 5)
+                num = num * 1000;
+            if (index1 == 6)
+                num = num / 39.37;
+            if (index1 == 7)
+                num = num / 3.281;
+            if (index1 == 8)
+                num = num / 1.094;
+            if (index1 == 9)
+                num = num * 1609;
 
-
+            if (index2 == 0)
+                num = num * 1000000000;
+            if (index2 == 1)
+                num = num * 1000000;
+            if (index2 == 2)
+                num = num * 1000;
+            if (index2 == 3)
+                num = num * 100;
+            if (index2 == 5)
+                num = num / 1000;
+            if (index2 == 6)
+                num = num * 39.37;
+            if (index2 == 7)
+                num = num * 3.281;
+            if (index2 == 8)
+                num = num * 1.094;
+            if (index2 == 9)
+                num = num / 1609;
 
             return num;
         }
 
+        //Energy Conversion
         public double EnergyConversion(int index1, int index2, double num)
         {
             if (index1 == 0 && index2 == 1)
@@ -311,6 +372,7 @@ namespace WPFModernUITest
             return num;
         }
 
+        //Power Conversion
         public double PowerConversion(int index1, int index2, double num)
         {
             if (index1 == 0 && index2 == 1)
@@ -321,6 +383,7 @@ namespace WPFModernUITest
             return num;
         }
 
+        //Pressure Conversion
         public double PressureConversion(int index1, int index2, double num)
         {
             if (index1 == 0)
@@ -352,58 +415,72 @@ namespace WPFModernUITest
             return num;
         }
 
+        //Speed Conversion
         public double SpeedConversion(int index1, int index2, double num)
         {
             if (index1 == 0)
-                switch (index2)
-                {
-                    case (1):
-                        return num * 100;
-                    case (2):
-                        return num / 27.778;
-                    case (3):
-                        return num / 34300;
-
-                }
-
+                num = num / 27.778;
             if (index1 == 1)
-                switch (index2)
-                {
-                    case (0):
-                        return num * 100;
-                    case (2):
-                        return num * 3.6;
-                    case (3):
-                        return num * 343;
-
-                }
-
-            if (index1 == 2)
-                switch (index2)
-                {
-                    case (0):
-                        return num * 27.778;
-                    case (1):
-                        return num / 3.6;
-                    case (3):
-                        return num / 1235;
-
-                }
-
+                num = num * 3.6;
             if (index1 == 3)
-                switch (index2)
-                {
-                    case (0):
-                        return num * 34300;
-                    case (1):
-                        return num * 343;
-                    case (2):
-                        return num * 1235;
+                num = num * 1.60934;
+            if (index1 == 4)
+                num = num * 1234.8;
 
-                }
+            if (index2 == 0)
+                num = num * 27.778;
+            if (index2 == 1)
+                num = num / 3.6;
+            if (index2 == 3)
+                num = num / 1.60934;
+            if (index2 == 4)
+                num = num / 1234.8;
+
             return num;
         }
 
+        //Surface Conversion
+        public double SurfaceConversion(int index1, int index2, double num)
+        {
+            if (index1 == 0)
+                num = num / 1000000;
+            if (index1 == 1)
+                num = num / 10000;
+            if (index1 == 3)
+                num = num * 10000;
+            if (index1 == 4)
+                num = num * 1000000;
+            if (index1 == 5)
+                num = num / 1550;
+            if (index1 == 6)
+                num = num / 10.764;
+            if (index1 == 7)
+                num = num / 1.196;
+            if (index1 == 8)
+                num = num * 2590000;
+
+
+            if (index2 == 0)
+                num = num * 1000000;
+            if (index2 == 1)
+                num = num * 10000;
+            if (index2 == 3)
+                num = num / 10000;
+            if (index2 == 4)
+                num = num / 1000000;
+            if (index2 == 5)
+                num = num * 1550;
+            if (index2 == 6)
+                num = num * 10.764;
+            if (index2 == 7)
+                num = num * 1.196;
+            if (index2 == 8)
+                num = num / 2590000;
+
+            return num;
+        }
+
+        //Temperature Conversion
         public double TemperatureConversion(int index1, int index2, double num)
         {
             if (index1 == 0)
@@ -433,6 +510,37 @@ namespace WPFModernUITest
             return num;
         }
 
+        //Volume Conversion
+        public double VolumeConversion(int index1, int index2, double num)
+        {
+            if (index1 == 0)
+                num = num * 1000;
+            if (index1 == 1)
+                num = num * 1000;
+            if (index1 == 3)
+                num = num / 1000;
+            if (index1 == 4)
+                num = num / 4.546;
+            if (index1 == 5)
+                num = num * 61.024;
+            if (index1 == 6)
+                num = num * 28.317;
 
+            if (index2 == 0)
+                num = num / 1000;
+            if (index2 == 1)
+                num = num / 1000;
+            if (index2 == 3)
+                num = num * 1000;
+            if (index2 == 4)
+                num = num * 4.546;
+            if (index2 == 5)
+                num = num / 61.024;
+            if (index2 == 6)
+                num = num / 28.317;
+
+            return num;
+
+        }
     }
 }
