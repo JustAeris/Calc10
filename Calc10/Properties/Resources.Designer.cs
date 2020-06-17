@@ -63,6 +63,16 @@ namespace Calc10.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap About {
+            get {
+                object obj = ResourceManager.GetObject("About", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Angle {
             get {
                 object obj = ResourceManager.GetObject("Angle", resourceCulture);
@@ -73,9 +83,19 @@ namespace Calc10.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Icon semblable à (Icône).
         /// </summary>
-        internal static System.Drawing.Icon AppIcon {
+        internal static System.Drawing.Icon CalcBlack {
             get {
-                object obj = ResourceManager.GetObject("AppIcon", resourceCulture);
+                object obj = ResourceManager.GetObject("CalcBlack", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Icon semblable à (Icône).
+        /// </summary>
+        internal static System.Drawing.Icon CalcWhite {
+            get {
+                object obj = ResourceManager.GetObject("CalcWhite", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
             }
         }
@@ -136,6 +156,16 @@ namespace Calc10.Properties {
         internal static System.Drawing.Bitmap Graphing {
             get {
                 object obj = ResourceManager.GetObject("Graphing", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Help {
+            get {
+                object obj = ResourceManager.GetObject("Help", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
