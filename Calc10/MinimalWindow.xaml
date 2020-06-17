@@ -1,0 +1,39 @@
+﻿<Window x:Class="Calc10.MinimalWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ui="http://schemas.modernwpf.com/2019"
+        xmlns:local="clr-namespace:Calc10"
+        mc:Ignorable="d"
+        Background="{DynamicResource SystemControlPageBackgroundChromeMediumLowBrush}"
+        Title="Minimal Calc10" Height="90" Width="350" 
+        WindowStyle="ToolWindow" Closing="Window_Closing" 
+        ResizeMode="NoResize" Topmost="True">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal">
+            <ui:NumberBox PlaceholderText="1 + 2^2" Width="200" Margin="10,10" AcceptsExpression="True"/>
+            <Button x:Name="minimalModeQuitButton" Click="minimalModeQuitButton_Click">
+                <Image Source="Assets/Exit.png" MaxHeight="20"/>
+            </Button>
+            <ui:DropDownButton Margin="10,0">
+                <Image Source="Assets/Help.png" MaxHeight="20"/>
+                <ui:DropDownButton.Flyout>
+                    <ui:Flyout>
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Width="300" TextWrapping="Wrap">
+                                In this textbox, you can direcly type an expression and push Enter to get the result.<LineBreak/><LineBreak/>
+                                Allowed symbols : + - * / , ( ) ^
+
+                            </TextBlock>
+                        </StackPanel>
+                    </ui:Flyout>
+                </ui:DropDownButton.Flyout>
+            </ui:DropDownButton>
+        </StackPanel>
+    </Grid>
+</Window>

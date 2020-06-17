@@ -11,14 +11,14 @@
     Height="450" MinHeight="450"
     ResizeMode="CanMinimize"
     mc:Ignorable="d"
-    Icon="Assets/AppIcon/CalcWhite.ico"
+    Icon="Assets/AppIcon.ico"
     Background="{DynamicResource SystemControlPageBackgroundChromeMediumLowBrush}"
     ui:ThemeManager.RequestedTheme="Default"
-    x:Name="MainWindows" Loaded="MainWindows_Loaded">
+    x:Name="MainWindows" Loaded="MainWindows_Loaded"
+    ui:TitleBar.IsBackButtonVisible="True">
 
 
     <Grid>
-
         <ui:NavigationView
             Grid.Column="0"
             IsTabStop="True"
@@ -35,10 +35,9 @@
             Grid.RowSpan="3"
             PaneTitle="Calc10">
             <ui:NavigationView.MenuItems>
-                <ui:NavigationViewItem Content="Calculator" Icon="Calculator"/>
+                <ui:NavigationViewItem Content="Calculator" Icon="Calculator" />
 
-
-                <ui:NavigationViewItemSeparator />
+                <ui:NavigationViewItemSeparator/>
 
                 <ui:NavigationViewItem Content="Converter">
                     <ui:NavigationViewItem.Icon>
@@ -86,7 +85,6 @@
 
                 <local:Converter x:Name="ConverterUI" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,10"
                                  Visibility="Hidden"/>
-
 
             </Grid>
         </ui:NavigationView>

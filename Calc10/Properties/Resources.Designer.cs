@@ -83,19 +83,9 @@ namespace Calc10.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Icon semblable à (Icône).
         /// </summary>
-        internal static System.Drawing.Icon CalcBlack {
+        internal static System.Drawing.Icon AppIcon {
             get {
-                object obj = ResourceManager.GetObject("CalcBlack", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Icon semblable à (Icône).
-        /// </summary>
-        internal static System.Drawing.Icon CalcWhite {
-            get {
-                object obj = ResourceManager.GetObject("CalcWhite", resourceCulture);
+                object obj = ResourceManager.GetObject("AppIcon", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
             }
         }
@@ -153,6 +143,26 @@ namespace Calc10.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Enter {
+            get {
+                object obj = ResourceManager.GetObject("Enter", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Exit {
+            get {
+                object obj = ResourceManager.GetObject("Exit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Graphing {
             get {
                 object obj = ResourceManager.GetObject("Graphing", resourceCulture);
@@ -196,6 +206,16 @@ namespace Calc10.Properties {
         internal static System.Drawing.Bitmap Length {
             get {
                 object obj = ResourceManager.GetObject("Length", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MinimalMode {
+            get {
+                object obj = ResourceManager.GetObject("MinimalMode", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Calc10;
 using ModernWpf;
 using ModernWpf.Controls;
 
@@ -78,5 +79,6 @@ namespace WPFModernUITest
             System.IO.File.WriteAllLines(@"Settings.ini", lines);
             }
         }
+        
     }
 }

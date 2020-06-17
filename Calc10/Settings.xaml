@@ -10,13 +10,12 @@
     <Grid>
         <StackPanel Orientation="Vertical">
             <GroupBox Header="Theme">
-            <StackPanel Orientation="Vertical">
-                <RadioButton x:Name="DarkTheme" Content="Dark" Click="DarkTheme_Click"/>
-                <RadioButton x:Name="LightTheme" Content="Light" Click="LightTheme_Click" />
-                <RadioButton x:Name="DefaultTheme" Content="Default" IsChecked="True" Click="DefaultTheme_Click"/>
-            </StackPanel>
-            
-        </GroupBox>
+                <StackPanel Orientation="Vertical">
+                    <RadioButton x:Name="DarkTheme" Content="Dark" Click="DarkTheme_Click"/>
+                    <RadioButton x:Name="LightTheme" Content="Light" Click="LightTheme_Click" />
+                    <RadioButton x:Name="DefaultTheme" Content="Default" IsChecked="True" Click="DefaultTheme_Click"/>
+                </StackPanel>
+            </GroupBox>
 
             <ui:DropDownButton Content="Choose Accent Color">
                 <ui:DropDownButton.Flyout>
@@ -27,7 +26,5 @@
 
             </ui:DropDownButton>
         </StackPanel>
-        
-        
     </Grid>
 </UserControl>

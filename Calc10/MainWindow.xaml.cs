@@ -20,6 +20,7 @@ using System.IO;
 using ModernWpf;
 using System.Threading;
 using System.Timers;
+using Calc10;
 
 namespace WPFModernUITest
 {
@@ -233,5 +234,6 @@ namespace WPFModernUITest
                 CustomHeader.Foreground = Brushes.Black;
             }
         }
+
     }
 }

@@ -83,6 +83,9 @@
       <DependentUpon>Currency.xaml</DependentUpon>
     </Compile>
     <Compile Include="CurrencyConverter.cs" />
+    <Compile Include="MinimalWindow.xaml.cs">
+      <DependentUpon>MinimalWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Settings.xaml.cs">
       <DependentUpon>Settings.xaml</DependentUpon>
     </Compile>
@@ -113,6 +116,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MinimalWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Settings.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -182,6 +189,11 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\Currency.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\AppIcon.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
@@ -264,7 +276,7 @@
     <Resource Include="icons8_calculator_2.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Assets\About.png">
+    <Resource Include="Assets\Exit.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
@@ -274,12 +286,17 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Assets\AppIcon\CalcBlack.ico">
+    <Resource Include="Assets\About.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Assets\AppIcon\CalcWhite.ico">
+    <Resource Include="Assets\Enter.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\MinimalMode.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

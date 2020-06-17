@@ -19,6 +19,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Net;
 using ModernWpf;
+using Calc10;
 
 namespace WPFModernUITest
 {
@@ -240,6 +241,13 @@ namespace WPFModernUITest
             num1 = 0;
             num2 = 0;
         }
-        
+
+        //MINIMAL MODE
+        private void enterMinimalModeButton_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.MainWindow.Hide();
+            var newW = new MinimalWindow();
+            newW.Show(); // works
+        }
     }
 }
