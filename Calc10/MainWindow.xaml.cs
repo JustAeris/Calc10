@@ -127,6 +127,8 @@ namespace WPFModernUITest
                 CurrencyUI.TextBox4.Foreground = Brushes.Black;
                 CustomHeader.Foreground = Brushes.Black;
             }
+            CustomHeader.Text = " Calculator";
+            NavView.SelectedItem = "ModernWpf.Controls.NavigationViewItem: Calculator";
         }
 
         //Navigation View Management

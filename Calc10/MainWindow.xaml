@@ -25,15 +25,15 @@
 
         <ui:NavigationView
             Grid.Column="0"
-            IsBackButtonVisible="Collapsed"
-            IsBackEnabled="{Binding ElementName=ContentFrame, Path=CanGoBack}"
             IsTabStop="True"
+            IsBackButtonVisible="Collapsed"
             SelectionFollowsFocus="Enabled"
             IsSettingsVisible="True"
             IsPaneOpen="False"
+            OpenPaneLength="200"
             IsPaneToggleButtonVisible="True"
-            PaneDisplayMode="LeftCompact"
             Header=""
+            PaneDisplayMode="LeftCompact"
             SelectionChanged="NavigationView_SelectionChanged"
             x:Name="NavView"
             Grid.RowSpan="3"
@@ -89,9 +89,8 @@
 
                 <local:Converter x:Name="ConverterUI" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,10"
                                  Visibility="Hidden"/>
-                
-                
-                
+
+
             </Grid>
         </ui:NavigationView>
     </Grid>

@@ -2,6 +2,7 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:ui="http://schemas.modernwpf.com/2019"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WPFModernUITest"
              mc:Ignorable="d" 
@@ -19,7 +20,7 @@
             <ComboBox x:Name="CurrencyListFROM" HorizontalAlignment="Center" Text="Select Currency" Margin="0,5"/>
 
             <TextBlock Text="Currency AMOUNT" HorizontalAlignment="Center" FontSize="17" Margin="0,5" x:Name="TextBox2"/>
-            <TextBox Text="1" x:Name="CurrencyAmountTextBox" TextAlignment="Center" SelectedText="" Margin="0,0,0,30"/>
+            <ui:NumberBox Text="1" x:Name="CurrencyAmountTextBox" Margin="0,0,0,30"/>
 
             <TextBlock Text="Currency you want to convert TO" HorizontalAlignment="Center" FontSize="17" x:Name="TextBox3"/>
             <ComboBox x:Name="CurrencyListTO" HorizontalAlignment="Center" Text="Select Currency" Margin="0,10"/>

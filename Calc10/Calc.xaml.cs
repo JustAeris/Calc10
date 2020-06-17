@@ -217,7 +217,7 @@ namespace WPFModernUITest
             }
         }
 
-        
+
 
         //Equal Button
         private void ButtonEqual_Click(object sender, RoutedEventArgs e)
