@@ -79,28 +79,31 @@ namespace WPFModernUITest
         //Auto Personalization And More On StartUp
         private void MainWindows_Loaded(object sender, RoutedEventArgs e)
         {
-            if (ReadSpecificLine("Settings.ini", 2) == "null")
+            var appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+            var SettingsPath = System.IO.Path.Combine(appDataPath + "\\Calc10\\Settings.ini");
+
+            if (ReadSpecificLine(SettingsPath, 2) == "null")
             {
                 ThemeManager.Current.ApplicationTheme = null;
                 ThemeSettingsUI.DefaultTheme.IsChecked = true;
             }
-            else if (ReadSpecificLine("Settings.ini", 2) == "Dark")
+            else if (ReadSpecificLine(SettingsPath, 2) == "Dark")
             {
                 ThemeManager.Current.ApplicationTheme = ApplicationTheme.Dark;
                 ThemeSettingsUI.DefaultTheme.IsChecked = false;
                 ThemeSettingsUI.DarkTheme.IsChecked = true;
 
             }
-            else if (ReadSpecificLine("Settings.ini", 2) == "Light")
+            else if (ReadSpecificLine(SettingsPath, 2) == "Light")
             {
                 ThemeManager.Current.ApplicationTheme = ApplicationTheme.Light;
                 ThemeSettingsUI.DefaultTheme.IsChecked = false;
                 ThemeSettingsUI.LightTheme.IsChecked = true;
             }
 
-            if (!string.IsNullOrEmpty(ReadSpecificLine("Settings.ini", 4)))
+            if (!string.IsNullOrEmpty(ReadSpecificLine(SettingsPath, 4)))
             {
-                Color color = (Color)ColorConverter.ConvertFromString(ReadSpecificLine("Settings.ini", 4));
+                Color color = (Color)ColorConverter.ConvertFromString(ReadSpecificLine(SettingsPath, 4));
                 ThemeManager.Current.AccentColor = color;
             }
 

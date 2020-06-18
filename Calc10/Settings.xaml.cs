@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.IO.IsolatedStorage;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -61,22 +63,29 @@ namespace WPFModernUITest
         {
             if (SettingsUIUC.Visibility == Visibility.Visible)
             {
-            string AccentColor, CurrentTheme;
+                string AccentColor, CurrentTheme;
 
-            //Color color2 = (Color)ColorConverter.ConvertFromString("#FF0063B1");
+                //Color color2 = (Color)ColorConverter.ConvertFromString("#FF0063B1");
 
-            if (DefaultTheme.IsChecked == true)
-            {
-                CurrentTheme = "null";
-            }  
-            else
-            { 
-                CurrentTheme = Convert.ToString(ThemeManager.Current.ActualApplicationTheme);
-            }
-            AccentColor = Convert.ToString(ThemeManager.Current.AccentColor);
+                if (DefaultTheme.IsChecked == true)
+                {
+                    CurrentTheme = "null";
+                }
+                else
+                {
+                    CurrentTheme = Convert.ToString(ThemeManager.Current.ActualApplicationTheme);
+                }
+                AccentColor = Convert.ToString(ThemeManager.Current.AccentColor);
 
-            string[] lines = { "[Theme]", CurrentTheme, "[Accent Color]", AccentColor };
-            System.IO.File.WriteAllLines(@"Settings.ini", lines);
+                string[] lines = { "[Theme]", CurrentTheme, "[Accent Color]", AccentColor };
+
+                var appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+                try { Directory.CreateDirectory(appDataPath + "\\Calc10"); }
+                catch { }
+
+
+                try { System.IO.File.WriteAllLines(appDataPath + "\\Calc10\\Settings.ini", lines); }
+                catch { }
             }
         }
         
