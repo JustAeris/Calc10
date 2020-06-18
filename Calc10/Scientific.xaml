@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="Calc10.Scientific"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Calc10"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Vertical">
+                <Button Height="32" Width="50" Content="x²" 
+                        FontFamily="French Script MT" FontSize="20" Margin="5" x:Name="powerButton"/>
+                
+                <Button Height="32" Width="50" Content="x³" 
+                        FontFamily="French Script MT" FontSize="20" Margin="5" x:Name="cubeButton"/>
+
+                <Button Height="32" Width="50"
+                        FontFamily="French Script MT" FontSize="20" Margin="5" x:Name="powerToXButton">
+                    <TextBlock>x<Run FontSize="9pt" BaselineAlignment="TextTop">x</Run></TextBlock>
+                </Button>
+
+                <Button Height="32" Width="50"
+                        FontFamily="French Script MT" FontSize="20" Margin="5" x:Name="powerOfTenToXButton">
+                    <TextBlock>10<Run FontSize="9pt" BaselineAlignment="TextTop">x</Run></TextBlock>
+                </Button>
+
+                <Button Height="32" Width="50"
+                        FontFamily="French Script MT" FontSize="20" Margin="5" x:Name="powerofXtoXMinus1Button">
+                    <TextBlock>x<Run FontSize="9pt" BaselineAlignment="TextTop">-1</Run></TextBlock>
+                </Button>
+
+                <Button Height="32" Width="50" Content="√x" 
+                        FontFamily="French Script MT" FontSize="20" Margin="5" x:Name="squareRootButton"/>
+                
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -89,6 +89,9 @@
     <Compile Include="MinimalWindow.xaml.cs">
       <DependentUpon>MinimalWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Scientific.xaml.cs">
+      <DependentUpon>Scientific.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Settings.xaml.cs">
       <DependentUpon>Settings.xaml</DependentUpon>
     </Compile>
@@ -124,6 +127,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="MinimalWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Scientific.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
