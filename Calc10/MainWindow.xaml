@@ -73,6 +73,14 @@
 
             <Grid Grid.RowSpan="3">
                 <TextBlock Text=" Calc10" Margin="0,-50,0,0" FontSize="30" FontFamily="Segoe UI Light" x:Name="CustomHeader"/>
+                <Button VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,-40,5,0" x:Name="aboutButton" Click="aboutButton_Click">
+                    <Image Source="Assets/About.png" Height="20" Width="20" Margin="-5"/>
+                    <Button.ToolTip>
+                        <ToolTip>
+                            About
+                        </ToolTip>
+                    </Button.ToolTip>
+                </Button>
 
                 <local:Calc HorizontalAlignment="Left" VerticalAlignment="Bottom" x:Name="CalcUI" Grid.Column="0" 
                             Visibility="Visible" Margin="0,10,0,0"/>

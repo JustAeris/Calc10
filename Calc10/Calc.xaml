@@ -48,15 +48,15 @@
                         <Button x:Name="ButtonMinus" Content="_-" Width="50" Margin="0,0,20,10" Click="ButtonMinus_Click"/>
                         <Button x:Name="ButtonTimes" Content="_*" Width="50" Margin="0,0,20,10" Click="ButtonTimes_Click"/>
                         <Button x:Name="ButtonDivide" Content="_/" Width="50" Margin="0,0,20,10" Click="ButtonDivide_Click"/>
-                    <Button VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,10,0,0" x:Name="enterMinimalModeButton" Width="50" 
-                            Height="32" Click="enterMinimalModeButton_Click">
-                        <Image Source="Assets/MinimalMode.png"/>
-                        <Button.ToolTip>
-                            <ToolTip>
-                                Minimal Mode
-                            </ToolTip>
-                        </Button.ToolTip>
-                    </Button>
+                        <Button VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,10,0,0" x:Name="enterMinimalModeButton" Width="50" 
+                                Height="32" Click="enterMinimalModeButton_Click">
+                            <Image Source="Assets/MinimalMode.png"/>
+                            <Button.ToolTip>
+                                <ToolTip>
+                                    Minimal Mode
+                                </ToolTip>
+                            </Button.ToolTip>
+                        </Button>
                 </StackPanel>
 
                 </StackPanel>

@@ -235,5 +235,10 @@ namespace WPFModernUITest
             }
         }
 
+        private void aboutButton_Click(object sender, RoutedEventArgs e)
+        {
+            var newW = new About();
+            newW.Show(); // works
+        }
     }
 }
