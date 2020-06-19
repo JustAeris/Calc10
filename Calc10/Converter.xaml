@@ -128,34 +128,15 @@
                 <ComboBox x:Name="fromUnitComboBox" HorizontalAlignment="Center" Margin="0,10" Width="170" SelectionChanged="fromUnitComboBox_SelectionChanged"/>
                 <TextBox x:Name="fromUnitTextBox" MaxWidth="200" TextChanged="fromUnitTextBox_TextChanged" IsUndoEnabled="True" UndoLimit="100"/>
 
-            <StackPanel Orientation="Horizontal">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="140"/>
-                        <ColumnDefinition Width="20"/>
-                        <ColumnDefinition Width="140"/>
-                    </Grid.ColumnDefinitions>
-                    
-                    <Button HorizontalAlignment="Right" x:Name="RefreshButton" Margin="0,20" IsEnabled="False" Click="RefreshButton_Click">
-                    <Grid Width="75">
-                        <Image Source="Assets/Refresh.png" MaxHeight="25" MaxWidth="25" HorizontalAlignment="Left"/>
-                        <TextBlock Text="Refresh" HorizontalAlignment="Right" VerticalAlignment="Center" />
-                    </Grid>
-                </Button>
-
-                <Button HorizontalAlignment="Left" x:Name="InvertButton" Margin="0,20" Grid.Column="2" Click="InvertButton_Click">
-                    <Grid Width="75">
-                        <Image Source="Assets/Invert.png" MaxHeight="25" MaxWidth="25" HorizontalAlignment="Left"/>
-                        <TextBlock Text="Invert" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                    </Grid>
-                </Button>
-                    
+            <Button HorizontalAlignment="Center" x:Name="InvertButton" Margin="0,20" Grid.Column="2" Click="InvertButton_Click">
+                <Grid Width="75">
+                    <Image Source="Assets/Invert.png" MaxHeight="25" MaxWidth="25" HorizontalAlignment="Left"/>
+                    <TextBlock Text="Invert" HorizontalAlignment="Right" VerticalAlignment="Center"/>
                 </Grid>
-                
-            </StackPanel>
-                
+            </Button>
 
-                <TextBlock Text="Insert the unit you want to convert TO" HorizontalAlignment="Center" FontSize="15" 
+
+            <TextBlock Text="Insert the unit you want to convert TO" HorizontalAlignment="Center" FontSize="15" 
                            x:Name="TextBlock3" x:FieldModifier="public"/>
                 <ComboBox x:Name="toUnitComboBox" HorizontalAlignment="Center" Margin="0,10" Width="170" SelectionChanged="fromUnitComboBox_SelectionChanged"/>
                 <TextBox x:Name="toUnitTextBox" MaxWidth="200" IsReadOnly="True"/>
