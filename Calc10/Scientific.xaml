@@ -17,7 +17,7 @@
 
                 <Button Height="32" Width="50"
                         FontFamily="French Script MT" FontSize="20" Margin="5" x:Name="powerToXButton">
-                    <TextBlock>x<Run FontSize="9pt" BaselineAlignment="TextTop">x</Run></TextBlock>
+                    <TextBlock>x<Run FontSize="9pt" BaselineAlignment="TextTop">y</Run></TextBlock>
                 </Button>
 
                 <Button Height="32" Width="50"
@@ -32,8 +32,9 @@
 
                 <Button Height="32" Width="50" Content="√x" 
                         FontFamily="French Script MT" FontSize="20" Margin="5" x:Name="squareRootButton"/>
-                
             </StackPanel>
+
+            
         </StackPanel>
     </Grid>
 </UserControl>
