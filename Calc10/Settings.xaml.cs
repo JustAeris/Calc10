@@ -88,6 +88,22 @@ namespace WPFModernUITest
                 catch { }
             }
         }
-        
+
+        //Custom Hex Code
+        private void customHexApplyButton_Click(object sender, RoutedEventArgs e)
+        {
+            try 
+            { 
+                Color color = (Color)ColorConverter.ConvertFromString(customHexCodeTextBox.Text);
+                ThemeManager.Current.AccentColor = color;
+            }
+            catch { MessageBox.Show("Invalid Hex Code", "Error", MessageBoxButton.OK, MessageBoxImage.Warning); }
+        }
+
+
+        private void DropDownButton_Click(object sender, RoutedEventArgs e)
+        {
+            customHexCodeTextBox.Text = Convert.ToString(ThemeManager.Current.ActualAccentColor);
+        }
     }
 }

@@ -19,11 +19,24 @@
 
             <ui:DropDownButton Content="Choose Accent Color">
                 <ui:DropDownButton.Flyout>
-                    <ui:Flyout Placement="Top" x:Name="AccentColorFlyout" Closed="AccentColorFlyout_Closed">
-                        <sc:AccentColorPicker x:Name="AccentColorPicker"/>
+                    <ui:Flyout Placement="Bottom" x:Name="AccentColorFlyout" Closed="AccentColorFlyout_Closed">
+                        <StackPanel Orientation="Vertical">
+                            <sc:AccentColorPicker x:Name="AccentColorPicker"/>
+                            <StackPanel Orientation="Horizontal">
+                                <ui:DropDownButton Content="Use your own ARGB Hex Color" Margin="142,-62,0,0" Click="DropDownButton_Click">
+                                    <ui:DropDownButton.Flyout>
+                                        <ui:Flyout Placement="Bottom">
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBox Text="#" Width="150" x:Name="customHexCodeTextBox"/>
+                                                <Button Content="Apply" Margin="10,0" x:Name="customHexApplyButton" Click="customHexApplyButton_Click"/>
+                                            </StackPanel>
+                                        </ui:Flyout>
+                                    </ui:DropDownButton.Flyout>
+                                </ui:DropDownButton>
+                            </StackPanel>
+                        </StackPanel>
                     </ui:Flyout>
                 </ui:DropDownButton.Flyout>
-
             </ui:DropDownButton>
         </StackPanel>
     </Grid>
