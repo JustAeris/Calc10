@@ -105,5 +105,13 @@ namespace WPFModernUITest
         {
             customHexCodeTextBox.Text = Convert.ToString(ThemeManager.Current.ActualAccentColor);
         }
+
+        private void customHexCodeTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (customHexCodeTextBox.Text.Length >= 2)
+                customHexCodeTextBox.Text = "#" + customHexCodeTextBox.Text.Substring(1);
+            else
+                customHexCodeTextBox.Text = "#";
+        }
     }
 }
