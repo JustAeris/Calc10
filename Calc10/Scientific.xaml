@@ -3,38 +3,63 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:sc="clr-namespace:SamplesCommon;assembly=SamplesCommon"
              xmlns:local="clr-namespace:Calc10"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="400" x:Name="ScientificUC" Loaded="ScientificUC_Loaded">
     <Grid>
-        <StackPanel Orientation="Horizontal">
-            <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Horizontal" >
+            <StackPanel Orientation="Vertical" Margin="5">
                 <Button Height="32" Width="50" Content="x²" 
-                        FontFamily="French Script MT" FontSize="20" Margin="5" x:Name="powerButton"/>
-                
+                        FontFamily="French Script MT" FontSize="20" Margin="5" x:Name="powerButton" Click="powerButton_Click"/>
+
                 <Button Height="32" Width="50" Content="x³" 
-                        FontFamily="French Script MT" FontSize="20" Margin="5" x:Name="cubeButton"/>
+                        FontFamily="French Script MT" FontSize="20" Margin="5" x:Name="cubeButton" Click="cubeButton_Click"/>
 
                 <Button Height="32" Width="50"
-                        FontFamily="French Script MT" FontSize="20" Margin="5" x:Name="powerToXButton">
+                        FontFamily="French Script MT" FontSize="20" Margin="5" x:Name="powerToXButton" Click="powerToXButton_Click">
                     <TextBlock>x<Run FontSize="9pt" BaselineAlignment="TextTop">y</Run></TextBlock>
                 </Button>
 
                 <Button Height="32" Width="50"
-                        FontFamily="French Script MT" FontSize="20" Margin="5" x:Name="powerOfTenToXButton">
+                        FontFamily="French Script MT" FontSize="20" Margin="5" x:Name="powerOfTenToXButton" Click="powerOfTenToXButton_Click">
                     <TextBlock>10<Run FontSize="9pt" BaselineAlignment="TextTop">x</Run></TextBlock>
                 </Button>
 
                 <Button Height="32" Width="50"
-                        FontFamily="French Script MT" FontSize="20" Margin="5" x:Name="powerofXtoXMinus1Button">
+                        FontFamily="French Script MT" FontSize="20" Margin="5" x:Name="powerofXtoXMinus1Button" Click="powerofXtoXMinus1Button_Click">
                     <TextBlock>x<Run FontSize="9pt" BaselineAlignment="TextTop">-1</Run></TextBlock>
                 </Button>
 
                 <Button Height="32" Width="50" Content="√x" 
-                        FontFamily="French Script MT" FontSize="20" Margin="5" x:Name="squareRootButton"/>
+                        FontFamily="French Script MT" FontSize="20" Margin="5" x:Name="squareRootButton" Click="squareRootButton_Click"/>
             </StackPanel>
 
-            
+            <StackPanel Orientation="Vertical" Margin="5">
+                <Button Height="32" Width="50" Margin="5" Content="sin" x:Name="sinButton" Click="sinButton_Click"/>
+                <Button Height="32" Width="50" Margin="5" Content="cos" x:Name="cosButton" Click="cosButton_Click"/>
+                <Button Height="32" Width="50" Margin="5" Content="tan" x:Name="tanButton" Click="tanButton_Click"/>
+
+                <Button Height="32" Width="50" Margin="5" Content="Arcsin" FontSize="12" x:Name="AsinButton" Click="AsinButton_Click"/>
+                <Button Height="32" Width="50" Margin="5" Content="Arccos" FontSize="11" x:Name="AcosButton" Click="AcosButton_Click"/>
+                <Button Height="32" Width="50" Margin="5" Content="Arctan" FontSize="11" x:Name="AtanButton" Click="AtanButton_Click"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Margin="5">
+                <Button Height="32" Width="50" Margin="5" Content="π" FontFamily="French Script MT" FontSize="19" x:Name="piButton" Click="piButton_Click"/>
+                <Button Height="32" Width="50" Margin="5" Content="e" FontFamily="French Script MT" FontSize="22" x:Name="eButton" Click="eButton_Click"/>
+                <Button Height="32" Width="50" Margin="5" Content="log" x:Name="logButton" Click="logButton_Click"/>
+                <Button Height="32" Width="50" Margin="5" Content="Rand" x:Name="ranButton" Click="ranButton_Click"/>
+                <Button Height="32" Width="50" Margin="5" Content="%" x:Name="precentButton" Click="precentButton_Click"/>
+                <Button Height="32" Width="50" Margin="5" Content="x!" FontFamily="French Script MT" FontSize="22" x:Name="factButton" Click="factButton_Click"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Margin="5">
+                <Button Height="32" Width="50" Margin="5" Content="|x|" FontFamily="French Script MT" FontSize="19" x:Name="absButton" Click="absButton_Click"/>
+                <Button Height="32" Width="50" Margin="5" Content="⌊x⌋" FontFamily="French Script MT" FontSize="22" x:Name="floorButton" Click="floorButton_Click"/>
+                <Button Height="32" Width="50" Margin="5" Content="⌈x⌉" FontFamily="French Script MT" FontSize="22" x:Name="ceilingButton" Click="ceilingButton_Click"/>
+            </StackPanel>
+
         </StackPanel>
     </Grid>
 </UserControl>

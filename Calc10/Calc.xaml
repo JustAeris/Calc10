@@ -12,10 +12,10 @@
 
 
             <StackPanel Margin="20,0">
-                <TextBlock x:Name="PendingOperation" Text=" " Grid.Column="1" Grid.Row="2" FontSize="20" 
+                <TextBlock x:Name="PendingOperation" Text=" " Grid.Column="1" Grid.Row="2" FontSize="20"
                    Margin="0,0,0,15" />
 
-                <TextBox Grid.Column="1" Grid.Row="3" IsReadOnly="True" Grid.ColumnSpan="2" x:Name="MainTextBox" 
+                <TextBox Grid.Column="1" Grid.Row="3" IsReadOnly="True" Grid.ColumnSpan="2" x:Name="MainTextBox"
                          MaxLength="12" TextOptions.TextHintingMode="Animated" TextAlignment="Right" FontSize="20" 
                          TextChanged="MainTextBox_TextChanged" Width="240" HorizontalAlignment="Left"/>
 
