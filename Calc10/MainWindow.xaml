@@ -4,8 +4,11 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:WPFModernUITest"
+    xmlns:sc="clr-namespace:SamplesCommon;assembly=SamplesCommon"
+    xmlns:local2="clr-namespace:Calc10"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ui="http://schemas.modernwpf.com/2019"
+    xmlns:muxc="mi"
     Title="Calc10"
     Width="370" MinWidth="370"
     Height="450" MinHeight="450"
@@ -19,6 +22,7 @@
 
 
     <Grid>
+
         <ui:NavigationView
             Grid.Column="0"
             IsTabStop="True"
@@ -71,9 +75,11 @@
 
             </ui:NavigationView.MenuItems>
 
-            <Grid Grid.RowSpan="3">
-                <TextBlock Text=" Calc10" Margin="0,-50,0,0" FontSize="30" FontFamily="Segoe UI Light" x:Name="CustomHeader"/>
-                <Button VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,-40,5,0" x:Name="aboutButton" Click="aboutButton_Click">
+            <Grid >
+
+
+                <TextBlock Text=" Calc10" Margin="0,-50,0,0" FontSize="30" FontFamily="Segoe UI Light" x:Name="CustomHeader" Grid.Column="0"/>
+                <Button VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,-40,5,0" x:Name="aboutButton" Click="aboutButton_Click" Grid.Column="0">
                     <Image Source="Assets/About.png" Height="20" Width="20" Margin="-5"/>
                     <Button.ToolTip>
                         <ToolTip>
@@ -85,14 +91,16 @@
                 <local:Calc HorizontalAlignment="Left" VerticalAlignment="Bottom" x:Name="CalcUI" Grid.Column="0" 
                             Visibility="Visible" Margin="0,10,0,0"/>
 
-                <local:Settings HorizontalAlignment="Left" x:Name="ThemeSettingsUI" Visibility="Hidden" 
+                <local:Settings HorizontalAlignment="Left" x:Name="ThemeSettingsUI" Visibility="Hidden" Grid.Row="0"
                                 VerticalAlignment="Top" Margin="5,10" PreviewMouseLeftButtonUp="ThemeSettingsUI_PreviewMouseLeftButtonUp"/>
 
-                <local:Currency x:Name="CurrencyUI" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                <local:Currency x:Name="CurrencyUI" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0"
                                 Margin="5" Visibility="Hidden"/>
 
-                <local:Converter x:Name="ConverterUI" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,10"
+                <local:Converter x:Name="ConverterUI" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,10" Grid.Row="0"
                                  Visibility="Hidden"/>
+
+                <local2:Scientific Margin="280,0,0,0" VerticalAlignment="Bottom" Visibility="Hidden" x:Name="ScientificUI"/>
 
             </Grid>
         </ui:NavigationView>

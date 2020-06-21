@@ -173,8 +173,11 @@ namespace WPFModernUITest
             CurrencyUI.Visibility = Visibility.Hidden;
             ThemeSettingsUI.Visibility = Visibility.Hidden;
             ConverterUI.Visibility = Visibility.Hidden;
+            ScientificUI.Visibility = Visibility.Hidden;
 
-            if (SelectedIndex == 1)
+            MainWindows.Width = 370;
+
+            if (SelectedIndex == 1 || SelectedIndex == 4)
             {
                 CalcUI.Visibility = Visibility.Visible;
                 MainWindows.Height = 450;
@@ -191,8 +194,11 @@ namespace WPFModernUITest
                 if (!CheckForInternetConnection())
                     MessageBox.Show("The Currency Converter won't work without Internet Connection.", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
             }
-            //if (SelectedIndex != 4)
-            //    NavView.Header = "Scientific";
+            if (SelectedIndex == 4)
+            {
+                ScientificUI.Visibility = Visibility.Visible;
+                MainWindows.Width = 620;
+            }
             //if (SelectedIndex != 5)
             //    NavView.Header = "WIP";
             //if (SelectedIndex != 6)
