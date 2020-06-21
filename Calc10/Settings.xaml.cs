@@ -113,5 +113,6 @@ namespace WPFModernUITest
             else
                 customHexCodeTextBox.Text = "#";
         }
+
     }
 }

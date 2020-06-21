@@ -28,7 +28,7 @@
                                         <ui:Flyout Placement="Bottom">
                                             <StackPanel Orientation="Horizontal">
                                                 <TextBox Text="#" Width="150" x:Name="customHexCodeTextBox" TextChanged="customHexCodeTextBox_TextChanged" MaxLength="9"/>
-                                                <Button Content="Apply" Margin="10,0" x:Name="customHexApplyButton" Click="customHexApplyButton_Click"/>
+                                                <Button Content="Apply" Margin="10,0,0,0" x:Name="customHexApplyButton" Click="customHexApplyButton_Click"/>
                                             </StackPanel>
                                         </ui:Flyout>
                                     </ui:DropDownButton.Flyout>
@@ -39,5 +39,7 @@
                 </ui:DropDownButton.Flyout>
             </ui:DropDownButton>
         </StackPanel>
+        
+        
     </Grid>
 </UserControl>
