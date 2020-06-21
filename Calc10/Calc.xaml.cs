@@ -209,9 +209,12 @@ namespace WPFModernUITest
                     results = num1 * num2;
                 else if (index == "divide")
                     results = num1 / num2;
+                else if (PendingOperation.Text.Contains("^"))
+                    results = Math.Pow(Convert.ToDouble(storeValue.Text), num2);
 
                 MainTextBox.Text = Convert.ToString(results);
 
+                storeValue.Text = "";
                 PendingOperation.Text = "";
                 num1 = 0;
                 num2 = 0;
@@ -234,9 +237,12 @@ namespace WPFModernUITest
                 results = num1 * num2;
             else if (index == "divide")
                 results = num1 / num2;
-            
+            else if (PendingOperation.Text.Contains("^"))
+                results = Math.Pow(Convert.ToDouble(storeValue.Text), num2);
+
             MainTextBox.Text = Convert.ToString(results);
 
+            storeValue.Text = "";
             PendingOperation.Text = "";
             num1 = 0;
             num2 = 0;
