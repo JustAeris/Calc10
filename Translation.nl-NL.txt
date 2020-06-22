@@ -6,24 +6,24 @@ Calculator, Wetenschappelijk
 
 # Converteerder
 Selecteer Type Eenheid
-Plaats de eenheid VANUIT WAAR u wilt converteren
-Plaats de eenheid WAARHEEN u wilt converteren
+Vul de eenheid VANUIT WAAR u wilt converteren in
+Vul de eenheid WAARHEEN u wilt converteren in
 Omkeren
 
-Hoek, Gegevens, Energie, Tijd, Lengte, Stroom, Druk, Snelheid, Oppervlakte, Temperatuur, Volume, Gewicht
+Hoek, Gegevens, Energie, Tijd, Lengte, Kracht, Druk, Snelheid, Oppervlakte, Temperatuur, Volume, Gewicht
 
 Graden, Radialen, Rangen
 Bits, Octet, Kilobit, Kilo-octet / Kilobyte, Megabit, Megaoctet / Megabyte, Gigabit, Gigaoctet / Gigabyte, Terabit, Teraoctet / Terabyte, Petabit, Petaoctet / Petabyte, Exabit, Exaoctet / Exabyte, Zettabit, Zettaoctet / Zettabyte, Yottabit, Yottaoctet / Yottabyte
-Joule, Kilojoule, Voedselcalorie (Kcal)
+Joule, Kilojoule, Voedingscalorie (Kcal)
 Microseconde, Milliseconde, Seconde, Minuut, Uur, Dag, Week, Maand, Jaar
-Nanometer, Micrometer, Millimeter, Centimeter ,Meter, Kilometer, Inches, Voet, Yard, Mijl};
+Nanometer, Micrometer, Millimeter, Centimeter, Meter, Kilometer, Inches, Voet, Yard, Mijl
 Watt, Kilowatt
 Atmosfeer, Bar, Pascal
-Centimeter per Seconde, Meter per Seconde, Kilometer per Uur, Mijl per Uur, Mach};
-Vierkante Millimeter, Vierkante Centimeter, Vierkante Meter, Hectare, Vierkante Kilometer, Vierkante Inch, Vierkante Voet, Vierkante Yard, Vierkante Mile,
-Celsuis, Fahrenheit, Kelvin
+Centimeter per Seconde, Meter per Seconde, Kilometer per Uur, Mijl per Uur, Mach
+Vierkante Millimeter, Vierkante Centimeter, Vierkante Meter, Hectare, Vierkante Kilometer, Vierkante Inch, Vierkante Voet, Vierkante Yard, Vierkante Mijl
+Celsius, Fahrenheit, Kelvin
 Milliliter, Kubieke Centimeter, Liter, Kubieke Meter, Gallon, Kubieke Inch, Kubieke Voet
-Milligram, Centigram, Decigram, Gram, Decagram, Hectogram, Kilogram, Ton, Ons, Pond, Ton (US)
+Milligram, Centigram, Decigram, Gram, Decagram, Hectogram, Kilogram, Ton, Ons, Pond, Ton (VS)
 
 
 # Valuta
@@ -59,7 +59,7 @@ Jaar / Jaren
 Uitkomst Datum
 
 
-#Instellingen
+# Instellingen
 Thema
 Donker
 Licht
@@ -69,8 +69,8 @@ Gebruik uw eigen ARBG Hex-kleur
 Toepassen
 
 
-# Minimalistische modus
-In dit tekstvak kunt u direct een expressie intypen en op Enter drukken om het resultaat de krijgen.
+# Minimalistische Modus
+In dit tekstvak kunt u direct een expressie intypen en op Enter drukken om het resultaat te krijgen.
 Toegestane symbolen
 
 
@@ -81,11 +81,11 @@ Ontwikkeld met C# en WPF
 Iconen door (Icons8)
 RSS feed voor valuta-conversie wordt geleverd door de ECB
 
-Dit werkt valt onder de GNU GPL 3 licensie, klik voor meer information
+Dit werkt valt onder de GNU GPL 3 licensie, klik voor meer informatie
 
-(Use Google Traduction for this one please)
+(Use Google Translate for this one please)
 Calc10, a multi-function calculator coded in C# and WPF.
-Copyright (C) 2020  Astyr
+Copyright (C) 2020 Astyr
 
 This program is free software: you can redistribute it
 and/or modify it under the terms of the GNU General
@@ -101,7 +101,7 @@ Public License for more details.
 
 You should have received a copy of the GNU General<LineBreak />
 Public License along with this program in root folder.<LineBreak />
-If not, seehttps://www.gnu.org/licenses/ .
+If not, see https://www.gnu.org/licenses/.
 
 Sluiten
 
