@@ -224,6 +224,7 @@ namespace WPFModernUITest
             if (SelectedIndex == 5)
             {
                 ProgrammerUI.Visibility = Visibility.Visible;
+                MainWindows.Height = 500;
             }
            
             if (SelectedIndex == 6)

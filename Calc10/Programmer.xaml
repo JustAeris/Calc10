@@ -11,17 +11,29 @@
     mc:Ignorable="d">
     <Grid>
         <StackPanel HorizontalAlignment="Center" Orientation="Vertical" Width="200">
-            <TextBlock Text="Enter a Type" FontSize="15" Margin="0,10,0,0"/>
-            <ComboBox Margin="0,5,0,0" Width="200">
+            <TextBlock Text="Enter a Type" FontSize="15" Margin="0,10,0,0">
+                <TextBlock.ToolTip>
+                    <ToolTip>
+                        <TextBlock>
+                            Allowed Characters for each value :<LineBreak/>
+                            Decimal : 1 2 3 4 5 6 7 8 9 0<LineBreak/>
+                            Hexadecimal : 1 2 3 4 5 6 7 8 9 0 A B C D E F<LineBreak/>
+                            Octal : 1 2 3 4 5 6 7 0<LineBreak/>
+                            Binary : 1 0
+                        </TextBlock>
+                    </ToolTip>
+                </TextBlock.ToolTip>
+            </TextBlock>
+            <ComboBox Width="200" x:Name="numberType" SelectionChanged="numberType_SelectionChanged">
                 <TextBlock Text="Decimal" TextAlignment="Center"/>
                 <TextBlock Text="Hexadecimal" TextAlignment="Center"/>
-                <TextBlock Text="Octet" TextAlignment="Center"/>
+                <TextBlock Text="Octal" TextAlignment="Center"/>
                 <TextBlock Text="Binary" TextAlignment="Center"/>
             </ComboBox>
-            <TextBlock Text="Enter a Number" FontSize="15"/>
-            <TextBox CharacterCasing="Upper" Margin="0,0,0,10" Width="200"/>
+            <TextBlock Text="Enter a Number" FontSize="15" Margin="0,10,0,0"/>
+            <TextBox CharacterCasing="Upper" Margin="0,0,0,10" Width="200" x:Name="numberTextBox" TextChanged="numberTextBox_TextChanged"/>
 
-            <Separator/>
+            <Separator Margin="0,10"/>
 
             <StackPanel >
                 <TextBlock Text="Decimal"/>
@@ -29,11 +41,11 @@
             </StackPanel>
             <StackPanel >
                 <TextBlock Text="Hexadecimal"/>
-                <TextBox x:Name="HexadecimalResult" IsReadOnly="True" Margin="0,0,0,10"/>
+                <TextBox x:Name="HexadecimalResult" IsReadOnly="True" Margin="0,0,0,10" CharacterCasing="Upper"/>
             </StackPanel>
             <StackPanel >
-                <TextBlock Text="Octet"/>
-                <TextBox x:Name="OctetResult" IsReadOnly="True" Margin="0,0,0,10"/>
+                <TextBlock Text="Octal"/>
+                <TextBox x:Name="OctalResult" IsReadOnly="True" Margin="0,0,0,10"/>
             </StackPanel>
             <StackPanel >
                 <TextBlock Text="Binary"/>
