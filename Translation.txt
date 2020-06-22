@@ -34,6 +34,14 @@ Convert
 Available currencies
 
 
+# Programmer
+Decimal
+Hexadecimal
+Octet
+Binary
+Enter a number
+
+
 # Date Calcul
 Date Difference
 From 
