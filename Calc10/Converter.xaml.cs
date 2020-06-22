@@ -117,55 +117,64 @@ namespace WPFModernUITest
         //Conversion Method
         public void Conversion()
         {
-            try
+            bool numOnly;
+            try {  long l2 = Int64.Parse(fromUnitTextBox.Text, System.Globalization.NumberStyles.HexNumber); numOnly = true; }
+            catch { numOnly = false; }
+
+            if (numOnly == true)
             {
-                if (!string.IsNullOrEmpty(fromUnitTextBox.Text) && !string.IsNullOrWhiteSpace(fromUnitTextBox.Text) 
-                    && !string.IsNullOrEmpty(Convert.ToString(fromUnitComboBox.SelectedItem)) && !string.IsNullOrEmpty(Convert.ToString(toUnitComboBox.SelectedItem)))
+                try
                 {
-                    if (unitListComboBox.SelectedIndex == 0)
-                        toUnitTextBox.Text = Convert.ToString(AngleConversion(fromUnitComboBox.SelectedIndex, toUnitComboBox.SelectedIndex, Convert.ToDouble(fromUnitTextBox.Text)));
+                    if (!string.IsNullOrEmpty(fromUnitTextBox.Text) && !string.IsNullOrWhiteSpace(fromUnitTextBox.Text) 
+                        && !string.IsNullOrEmpty(Convert.ToString(fromUnitComboBox.SelectedItem)) && !string.IsNullOrEmpty(Convert.ToString(toUnitComboBox.SelectedItem)))
+                    {
+                        if (unitListComboBox.SelectedIndex == 0)
+                            toUnitTextBox.Text = Convert.ToString(AngleConversion(fromUnitComboBox.SelectedIndex, toUnitComboBox.SelectedIndex, Convert.ToDouble(fromUnitTextBox.Text)));
 
-                    else if (unitListComboBox.SelectedIndex == 1)
-                        toUnitTextBox.Text = Convert.ToString(DataConversion(fromUnitComboBox.SelectedIndex, toUnitComboBox.SelectedIndex, Convert.ToDouble(fromUnitTextBox.Text)));
+                        else if (unitListComboBox.SelectedIndex == 1)
+                            toUnitTextBox.Text = Convert.ToString(DataConversion(fromUnitComboBox.SelectedIndex, toUnitComboBox.SelectedIndex, Convert.ToDouble(fromUnitTextBox.Text)));
 
-                    else if (unitListComboBox.SelectedIndex == 2)
-                        toUnitTextBox.Text = Convert.ToString(EnergyConversion(fromUnitComboBox.SelectedIndex, toUnitComboBox.SelectedIndex, Convert.ToDouble(fromUnitTextBox.Text)));
+                        else if (unitListComboBox.SelectedIndex == 2)
+                            toUnitTextBox.Text = Convert.ToString(EnergyConversion(fromUnitComboBox.SelectedIndex, toUnitComboBox.SelectedIndex, Convert.ToDouble(fromUnitTextBox.Text)));
 
-                    else if (unitListComboBox.SelectedIndex == 3)
-                        toUnitTextBox.Text = Convert.ToString(TimeConversion(fromUnitComboBox.SelectedIndex, toUnitComboBox.SelectedIndex, Convert.ToDouble(fromUnitTextBox.Text)));
+                        else if (unitListComboBox.SelectedIndex == 3)
+                            toUnitTextBox.Text = Convert.ToString(TimeConversion(fromUnitComboBox.SelectedIndex, toUnitComboBox.SelectedIndex, Convert.ToDouble(fromUnitTextBox.Text)));
 
-                    else if (unitListComboBox.SelectedIndex == 4)
-                        toUnitTextBox.Text = Convert.ToString(LengthConversion(fromUnitComboBox.SelectedIndex, toUnitComboBox.SelectedIndex, Convert.ToDouble(fromUnitTextBox.Text)));
+                        else if (unitListComboBox.SelectedIndex == 4)
+                            toUnitTextBox.Text = Convert.ToString(LengthConversion(fromUnitComboBox.SelectedIndex, toUnitComboBox.SelectedIndex, Convert.ToDouble(fromUnitTextBox.Text)));
 
-                    else if (unitListComboBox.SelectedIndex == 5)
-                        toUnitTextBox.Text = Convert.ToString(PowerConversion(fromUnitComboBox.SelectedIndex, toUnitComboBox.SelectedIndex, Convert.ToDouble(fromUnitTextBox.Text)));
+                        else if (unitListComboBox.SelectedIndex == 5)
+                            toUnitTextBox.Text = Convert.ToString(PowerConversion(fromUnitComboBox.SelectedIndex, toUnitComboBox.SelectedIndex, Convert.ToDouble(fromUnitTextBox.Text)));
 
-                    else if (unitListComboBox.SelectedIndex == 6)
-                        toUnitTextBox.Text = Convert.ToString(PressureConversion(fromUnitComboBox.SelectedIndex, toUnitComboBox.SelectedIndex, Convert.ToDouble(fromUnitTextBox.Text)));
+                        else if (unitListComboBox.SelectedIndex == 6)
+                            toUnitTextBox.Text = Convert.ToString(PressureConversion(fromUnitComboBox.SelectedIndex, toUnitComboBox.SelectedIndex, Convert.ToDouble(fromUnitTextBox.Text)));
 
-                    else if (unitListComboBox.SelectedIndex == 7)
-                        toUnitTextBox.Text = Convert.ToString(SpeedConversion(fromUnitComboBox.SelectedIndex, toUnitComboBox.SelectedIndex, Convert.ToDouble(fromUnitTextBox.Text)));
+                        else if (unitListComboBox.SelectedIndex == 7)
+                            toUnitTextBox.Text = Convert.ToString(SpeedConversion(fromUnitComboBox.SelectedIndex, toUnitComboBox.SelectedIndex, Convert.ToDouble(fromUnitTextBox.Text)));
 
-                    else if (unitListComboBox.SelectedIndex == 8)
-                        toUnitTextBox.Text = Convert.ToString(SurfaceConversion(fromUnitComboBox.SelectedIndex, toUnitComboBox.SelectedIndex, Convert.ToDouble(fromUnitTextBox.Text)));
+                        else if (unitListComboBox.SelectedIndex == 8)
+                            toUnitTextBox.Text = Convert.ToString(SurfaceConversion(fromUnitComboBox.SelectedIndex, toUnitComboBox.SelectedIndex, Convert.ToDouble(fromUnitTextBox.Text)));
 
-                    else if (unitListComboBox.SelectedIndex == 9)
-                        toUnitTextBox.Text = Convert.ToString(TemperatureConversion(fromUnitComboBox.SelectedIndex, toUnitComboBox.SelectedIndex, Convert.ToDouble(fromUnitTextBox.Text)));
+                        else if (unitListComboBox.SelectedIndex == 9)
+                            toUnitTextBox.Text = Convert.ToString(TemperatureConversion(fromUnitComboBox.SelectedIndex, toUnitComboBox.SelectedIndex, Convert.ToDouble(fromUnitTextBox.Text)));
 
-                    else if (unitListComboBox.SelectedIndex == 10)
-                        toUnitTextBox.Text = Convert.ToString(VolumeConversion(fromUnitComboBox.SelectedIndex, toUnitComboBox.SelectedIndex, Convert.ToDouble(fromUnitTextBox.Text)));
+                        else if (unitListComboBox.SelectedIndex == 10)
+                            toUnitTextBox.Text = Convert.ToString(VolumeConversion(fromUnitComboBox.SelectedIndex, toUnitComboBox.SelectedIndex, Convert.ToDouble(fromUnitTextBox.Text)));
 
-                    else if (unitListComboBox.SelectedIndex == 11)
-                        toUnitTextBox.Text = Convert.ToString(WeightConversion(fromUnitComboBox.SelectedIndex, toUnitComboBox.SelectedIndex, Convert.ToDouble(fromUnitTextBox.Text)));
+                        else if (unitListComboBox.SelectedIndex == 11)
+                            toUnitTextBox.Text = Convert.ToString(WeightConversion(fromUnitComboBox.SelectedIndex, toUnitComboBox.SelectedIndex, Convert.ToDouble(fromUnitTextBox.Text)));
 
-                    else
-                        toUnitTextBox.Text = "";
+                        else
+                            toUnitTextBox.Text = "";
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Invalid Value !", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
                 }
             }
-            catch
-            {
-                throw new ArgumentException("Invalid Input");
-            }
+
+            
         }
 
         //Angle Conversion
