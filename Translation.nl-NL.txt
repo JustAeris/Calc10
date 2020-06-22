@@ -34,6 +34,14 @@ Converteren
 Beschikbare valuta
 
 
+# Programmeur
+Decimaal
+Hexadecimaal
+Octet
+Binair
+Voer een getal in
+
+
 # Berekenen datum
 Verschil datum
 Van
