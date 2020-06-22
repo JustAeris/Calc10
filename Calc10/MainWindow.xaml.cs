@@ -33,6 +33,7 @@ namespace WPFModernUITest
         {
             InitializeComponent();
         }
+
         //Method to check for Internet Connection
         public static bool CheckForInternetConnection()
         {
@@ -45,6 +46,7 @@ namespace WPFModernUITest
             catch
             { return false; }
         }
+
         //Method for reading files 
         static string ReadSpecificLine(string filePath, int lineNumber)
         {
@@ -76,6 +78,7 @@ namespace WPFModernUITest
             return content;
 
         }
+
         //Auto Personalization And More On StartUp
         private void MainWindows_Loaded(object sender, RoutedEventArgs e)
         {
@@ -118,6 +121,14 @@ namespace WPFModernUITest
                 CurrencyUI.TextBox3.Foreground = Brushes.White;
                 CurrencyUI.TextBox4.Foreground = Brushes.White;
                 CustomHeader.Foreground = Brushes.White;
+                DateUI.TextBlock1.Foreground = Brushes.White;
+                DateUI.TextBlock2.Foreground = Brushes.White;
+                DateUI.TextBlock3.Foreground = Brushes.White;
+                DateUI.TextBlock4.Foreground = Brushes.White;
+                DateUI.TextBlock5.Foreground = Brushes.White;
+                DateUI.TextBlock6.Foreground = Brushes.White;
+                DateUI.TextBlock7.Foreground = Brushes.White;
+                DateUI.TextBlock8.Foreground = Brushes.White;
             }
             if (ThemeManager.Current.ActualApplicationTheme == ApplicationTheme.Light)
             {
@@ -130,9 +141,17 @@ namespace WPFModernUITest
                 CurrencyUI.TextBox3.Foreground = Brushes.Black;
                 CurrencyUI.TextBox4.Foreground = Brushes.Black;
                 CustomHeader.Foreground = Brushes.Black;
+                DateUI.TextBlock1.Foreground = Brushes.Black;
+                DateUI.TextBlock2.Foreground = Brushes.Black;
+                DateUI.TextBlock3.Foreground = Brushes.Black;
+                DateUI.TextBlock4.Foreground = Brushes.Black;
+                DateUI.TextBlock5.Foreground = Brushes.Black;
+                DateUI.TextBlock6.Foreground = Brushes.Black;
+                DateUI.TextBlock7.Foreground = Brushes.Black;
+                DateUI.TextBlock8.Foreground = Brushes.Black;
             }
             CustomHeader.Text = " Calculator";
-            NavView.SelectedItem = "ModernWpf.Controls.NavigationViewItem: Calculator";
+
         }
 
         //Navigation View Management
@@ -165,7 +184,7 @@ namespace WPFModernUITest
             if (SelectedIndex == 5)
                 CustomHeader.Text = " Programmer WIP";
             if (SelectedIndex == 6)
-                CustomHeader.Text = " Date Calcul WIP";
+                CustomHeader.Text = " Date Calcul";
             if (SelectedIndex == 7)
                 CustomHeader.Text = " Settings";
 
@@ -175,7 +194,10 @@ namespace WPFModernUITest
             ConverterUI.Visibility = Visibility.Hidden;
             ScientificUI.Visibility = Visibility.Hidden;
 
+            DateUI.Visibility = Visibility.Hidden;
+
             MainWindows.Width = 370;
+            MainWindows.Height = 450;
 
             if (SelectedIndex == 1 || SelectedIndex == 4)
             {
@@ -201,8 +223,10 @@ namespace WPFModernUITest
             }
             //if (SelectedIndex != 5)
             //    NavView.Header = "WIP";
-            //if (SelectedIndex != 6)
-            //    NavView.Header = "Date Calcul";
+            if (SelectedIndex == 6)
+            {
+                DateUI.Visibility = Visibility.Visible;
+            }
             if (SelectedIndex == 7)
             {
                 ThemeSettingsUI.Visibility = Visibility.Visible;
@@ -211,7 +235,6 @@ namespace WPFModernUITest
             }
 
         }
-
 
         //Set color of text depending on the theme
         private async void ThemeSettingsUI_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
@@ -229,6 +252,14 @@ namespace WPFModernUITest
                 CurrencyUI.TextBox3.Foreground = Brushes.White;
                 CurrencyUI.TextBox4.Foreground = Brushes.White;
                 CustomHeader.Foreground = Brushes.White;
+                DateUI.TextBlock1.Foreground = Brushes.White;
+                DateUI.TextBlock2.Foreground = Brushes.White;
+                DateUI.TextBlock3.Foreground = Brushes.White;
+                DateUI.TextBlock4.Foreground = Brushes.White;
+                DateUI.TextBlock5.Foreground = Brushes.White;
+                DateUI.TextBlock6.Foreground = Brushes.White;
+                DateUI.TextBlock7.Foreground = Brushes.White;
+                DateUI.TextBlock8.Foreground = Brushes.White;
             }
             if (ThemeManager.Current.ActualApplicationTheme == ApplicationTheme.Light)
             {
@@ -241,9 +272,18 @@ namespace WPFModernUITest
                 CurrencyUI.TextBox3.Foreground = Brushes.Black;
                 CurrencyUI.TextBox4.Foreground = Brushes.Black;
                 CustomHeader.Foreground = Brushes.Black;
+                DateUI.TextBlock1.Foreground = Brushes.Black;
+                DateUI.TextBlock2.Foreground = Brushes.Black;
+                DateUI.TextBlock3.Foreground = Brushes.Black;
+                DateUI.TextBlock4.Foreground = Brushes.Black;
+                DateUI.TextBlock5.Foreground = Brushes.Black;
+                DateUI.TextBlock6.Foreground = Brushes.Black;
+                DateUI.TextBlock7.Foreground = Brushes.Black;
+                DateUI.TextBlock8.Foreground = Brushes.Black;
             }
         }
 
+        //ABOUT Window
         private void aboutButton_Click(object sender, RoutedEventArgs e)
         {
             var newW = new About();

@@ -38,6 +38,7 @@
             x:Name="NavView"
             Grid.RowSpan="3"
             PaneTitle="Calc10">
+            
             <ui:NavigationView.MenuItems>
                 <ui:NavigationViewItem Content="Calculator" Icon="Calculator" />
 
@@ -101,6 +102,9 @@
                                  Visibility="Hidden"/>
 
                 <local2:Scientific Margin="280,0,0,0" VerticalAlignment="Bottom" Visibility="Hidden" x:Name="ScientificUI"/>
+
+                <local2:Date x:Name="DateUI" Visibility="Hidden"/>
+
 
             </Grid>
         </ui:NavigationView>
