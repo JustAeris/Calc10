@@ -46,7 +46,9 @@ namespace WPFModernUITest
             {
                 CurrencyListFROM.Items.Add(currency.ToUpper());
                 CurrencyListTO.Items.Add(currency.ToUpper());
+                CurrencyListTextBox.Text = CurrencyListTextBox.Text + " " + currency.ToUpper();
             }
+            CurrencyListTextBox.Text = CurrencyListTextBox.Text.Substring(1);
         }
 
         private void ButtonConvert_Click(object sender, RoutedEventArgs e)
