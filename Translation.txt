@@ -1,5 +1,5 @@
 String to translate:
-[Language][Your name if you want credits]
+[Language][Your name if you want credits][Social, only one]
 
 Calculator, Scientific
 
