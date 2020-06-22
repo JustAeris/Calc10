@@ -1,34 +1,64 @@
-﻿<UserControl x:Class="WPFModernUITest.Settings"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:sc="clr-namespace:SamplesCommon;assembly=SamplesCommon"
-             xmlns:ui="http://schemas.modernwpf.com/2019"
-             xmlns:local="clr-namespace:WPFModernUITest"
-             mc:Ignorable="d" Height="700" Width="200" x:Name="SettingsUIUC">
+﻿<UserControl
+    x:Class="WPFModernUITest.Settings"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:WPFModernUITest"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sc="clr-namespace:SamplesCommon;assembly=SamplesCommon"
+    xmlns:ui="http://schemas.modernwpf.com/2019"
+    x:Name="SettingsUIUC"
+    Width="200"
+    Height="700"
+    mc:Ignorable="d">
     <Grid>
         <StackPanel Orientation="Vertical">
             <GroupBox Header="Theme">
                 <StackPanel Orientation="Vertical">
-                    <RadioButton x:Name="DarkTheme" Content="Dark" Click="DarkTheme_Click"/>
-                    <RadioButton x:Name="LightTheme" Content="Light" Click="LightTheme_Click" />
-                    <RadioButton x:Name="DefaultTheme" Content="Default" IsChecked="True" Click="DefaultTheme_Click"/>
+                    <RadioButton
+                        x:Name="DarkTheme"
+                        Click="DarkTheme_Click"
+                        Content="Dark" />
+                    <RadioButton
+                        x:Name="LightTheme"
+                        Click="LightTheme_Click"
+                        Content="Light" />
+                    <RadioButton
+                        x:Name="DefaultTheme"
+                        Click="DefaultTheme_Click"
+                        Content="Default"
+                        IsChecked="True" />
                 </StackPanel>
             </GroupBox>
 
             <ui:DropDownButton Content="Choose Accent Color">
                 <ui:DropDownButton.Flyout>
-                    <ui:Flyout Placement="Bottom" x:Name="AccentColorFlyout" Closed="AccentColorFlyout_Closed">
+                    <ui:Flyout
+                        x:Name="AccentColorFlyout"
+                        Closed="AccentColorFlyout_Closed"
+                        Placement="Bottom">
                         <StackPanel Orientation="Vertical">
-                            <sc:AccentColorPicker x:Name="AccentColorPicker"/>
+                            <sc:AccentColorPicker x:Name="AccentColorPicker" />
                             <StackPanel Orientation="Horizontal">
-                                <ui:DropDownButton Content="Use your own ARGB Hex Color" Margin="142,-62,0,0" Click="DropDownButton_Click">
+                                <ui:DropDownButton
+                                    Margin="142,-62,0,0"
+                                    Click="DropDownButton_Click"
+                                    Content="Use your own ARGB Hex Color">
                                     <ui:DropDownButton.Flyout>
                                         <ui:Flyout Placement="Bottom">
                                             <StackPanel Orientation="Horizontal">
-                                                <TextBox Text="#" Width="150" x:Name="customHexCodeTextBox" TextChanged="customHexCodeTextBox_TextChanged" MaxLength="9" CharacterCasing="Upper"/>
-                                                <Button Content="Apply" Margin="10,0,0,0" x:Name="customHexApplyButton" Click="customHexApplyButton_Click"/>
+                                                <TextBox
+                                                    x:Name="customHexCodeTextBox"
+                                                    Width="150"
+                                                    CharacterCasing="Upper"
+                                                    MaxLength="9"
+                                                    Text="#"
+                                                    TextChanged="customHexCodeTextBox_TextChanged" />
+                                                <Button
+                                                    x:Name="customHexApplyButton"
+                                                    Margin="10,0,0,0"
+                                                    Click="customHexApplyButton_Click"
+                                                    Content="Apply" />
                                             </StackPanel>
                                         </ui:Flyout>
                                     </ui:DropDownButton.Flyout>
@@ -39,7 +69,7 @@
                 </ui:DropDownButton.Flyout>
             </ui:DropDownButton>
         </StackPanel>
-        
-        
+
+
     </Grid>
 </UserControl>

@@ -4,84 +4,103 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:WPFModernUITest"
-    xmlns:sc="clr-namespace:SamplesCommon;assembly=SamplesCommon"
     xmlns:local2="clr-namespace:Calc10"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:ui="http://schemas.modernwpf.com/2019"
     xmlns:muxc="mi"
+    xmlns:sc="clr-namespace:SamplesCommon;assembly=SamplesCommon"
+    xmlns:ui="http://schemas.modernwpf.com/2019"
+    x:Name="MainWindows"
     Title="Calc10"
-    Width="370" MinWidth="370"
-    Height="450" MinHeight="450"
-    ResizeMode="CanMinimize"
-    mc:Ignorable="d"
-    Icon="Assets/AppIcon.ico"
-    Background="{DynamicResource SystemControlPageBackgroundChromeMediumLowBrush}"
+    Width="370"
+    Height="450"
+    MinWidth="370"
+    MinHeight="450"
     ui:ThemeManager.RequestedTheme="Default"
-    x:Name="MainWindows" Loaded="MainWindows_Loaded"
-    ui:TitleBar.IsBackButtonVisible="True">
+    ui:TitleBar.IsBackButtonVisible="True"
+    Background="{DynamicResource SystemControlPageBackgroundChromeMediumLowBrush}"
+    Icon="Assets/AppIcon.ico"
+    Loaded="MainWindows_Loaded"
+    ResizeMode="CanMinimize"
+    mc:Ignorable="d">
 
 
     <Grid>
 
         <ui:NavigationView
-            Grid.Column="0"
-            IsTabStop="True"
-            IsBackButtonVisible="Collapsed"
-            SelectionFollowsFocus="Enabled"
-            IsSettingsVisible="True"
-            IsPaneOpen="False"
-            OpenPaneLength="200"
-            IsPaneToggleButtonVisible="True"
-            Header=""
-            PaneDisplayMode="LeftCompact"
-            SelectionChanged="NavigationView_SelectionChanged"
             x:Name="NavView"
             Grid.RowSpan="3"
-            PaneTitle="Calc10">
-            
+            Grid.Column="0"
+            Header=""
+            IsBackButtonVisible="Collapsed"
+            IsPaneOpen="False"
+            IsPaneToggleButtonVisible="True"
+            IsSettingsVisible="True"
+            IsTabStop="True"
+            OpenPaneLength="200"
+            PaneDisplayMode="LeftCompact"
+            PaneTitle="Calc10"
+            SelectionChanged="NavigationView_SelectionChanged"
+            SelectionFollowsFocus="Enabled">
+
             <ui:NavigationView.MenuItems>
                 <ui:NavigationViewItem Content="Calculator" Icon="Calculator" />
 
-                <ui:NavigationViewItemSeparator/>
+                <ui:NavigationViewItemSeparator />
 
                 <ui:NavigationViewItem Content="Converter">
                     <ui:NavigationViewItem.Icon>
-                        <ui:BitmapIcon UriSource="Assets/Conversion.png"/>
+                        <ui:BitmapIcon UriSource="Assets/Conversion.png" />
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
 
                 <ui:NavigationViewItem Content="Currency">
                     <ui:NavigationViewItem.Icon>
-                        <ui:BitmapIcon UriSource="Assets/Currency.png"/>
+                        <ui:BitmapIcon UriSource="Assets/Currency.png" />
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
 
                 <ui:NavigationViewItem Content="Scientific">
                     <ui:NavigationViewItem.Icon>
-                        <ui:BitmapIcon UriSource="Assets/Scientific.png"/>
+                        <ui:BitmapIcon UriSource="Assets/Scientific.png" />
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
 
                 <ui:NavigationViewItem Content="Programmer">
                     <ui:NavigationViewItem.Icon>
-                        <ui:BitmapIcon UriSource="Assets/Programmer.png"/>
+                        <ui:BitmapIcon UriSource="Assets/Programmer.png" />
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
 
                 <ui:NavigationViewItem Content="Date Calcul">
                     <ui:NavigationViewItem.Icon>
-                        <ui:BitmapIcon UriSource="Assets/Date.png"/>
+                        <ui:BitmapIcon UriSource="Assets/Date.png" />
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
 
             </ui:NavigationView.MenuItems>
 
-            <Grid >
+            <Grid>
 
 
-                <TextBlock Text=" Calc10" Margin="0,-50,0,0" FontSize="30" FontFamily="Segoe UI Light" x:Name="CustomHeader" Grid.Column="0"/>
-                <Button VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,-40,5,0" x:Name="aboutButton" Click="aboutButton_Click" Grid.Column="0">
-                    <Image Source="Assets/About.png" Height="20" Width="20" Margin="-5"/>
+                <TextBlock
+                    x:Name="CustomHeader"
+                    Grid.Column="0"
+                    Margin="0,-50,0,0"
+                    FontFamily="Segoe UI Light"
+                    FontSize="30"
+                    Text=" Calc10" />
+                <Button
+                    x:Name="aboutButton"
+                    Grid.Column="0"
+                    Margin="0,-40,5,0"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
+                    Click="aboutButton_Click">
+                    <Image
+                        Width="20"
+                        Height="20"
+                        Margin="-5"
+                        Source="Assets/About.png" />
                     <Button.ToolTip>
                         <ToolTip>
                             About
@@ -89,21 +108,46 @@
                     </Button.ToolTip>
                 </Button>
 
-                <local:Calc HorizontalAlignment="Left" VerticalAlignment="Bottom" x:Name="CalcUI" Grid.Column="0" 
-                            Visibility="Visible" Margin="0,10,0,0"/>
+                <local:Calc
+                    x:Name="CalcUI"
+                    Grid.Column="0"
+                    Margin="0,10,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Bottom"
+                    Visibility="Visible" />
 
-                <local:Settings HorizontalAlignment="Left" x:Name="ThemeSettingsUI" Visibility="Hidden" Grid.Row="0"
-                                VerticalAlignment="Top" Margin="5,10" PreviewMouseLeftButtonUp="ThemeSettingsUI_PreviewMouseLeftButtonUp"/>
+                <local:Settings
+                    x:Name="ThemeSettingsUI"
+                    Grid.Row="0"
+                    Margin="5,10"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    PreviewMouseLeftButtonUp="ThemeSettingsUI_PreviewMouseLeftButtonUp"
+                    Visibility="Hidden" />
 
-                <local:Currency x:Name="CurrencyUI" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0"
-                                Margin="5" Visibility="Hidden"/>
+                <local:Currency
+                    x:Name="CurrencyUI"
+                    Grid.Row="0"
+                    Margin="5"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Visibility="Hidden" />
 
-                <local:Converter x:Name="ConverterUI" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,10" Grid.Row="0"
-                                 Visibility="Hidden"/>
+                <local:Converter
+                    x:Name="ConverterUI"
+                    Grid.Row="0"
+                    Margin="5,10"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Visibility="Hidden" />
 
-                <local2:Scientific Margin="280,0,0,0" VerticalAlignment="Bottom" Visibility="Hidden" x:Name="ScientificUI"/>
+                <local2:Scientific
+                    x:Name="ScientificUI"
+                    Margin="280,0,0,0"
+                    VerticalAlignment="Bottom"
+                    Visibility="Hidden" />
 
-                <local2:Date x:Name="DateUI" Visibility="Hidden"/>
+                <local2:Date x:Name="DateUI" Visibility="Hidden" />
 
 
             </Grid>

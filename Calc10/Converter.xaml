@@ -1,148 +1,235 @@
-﻿<UserControl x:Class="WPFModernUITest.Converter"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:ui="http://schemas.modernwpf.com/2019"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:WPFModernUITest"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="300" x:Name="ConverterUI">
+﻿<UserControl
+    x:Class="WPFModernUITest.Converter"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:WPFModernUITest"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ui="http://schemas.modernwpf.com/2019"
+    x:Name="ConverterUI"
+    d:DesignHeight="450"
+    d:DesignWidth="300"
+    mc:Ignorable="d">
     <Grid>
-        
-            <StackPanel Orientation="Vertical">
 
-                <TextBlock Text="Select Unit Type" HorizontalAlignment="Center" FontSize="15" Margin="0,5" 
-                           x:Name="TextBlock1"/>
-                <ComboBox Grid.Row="1" x:Name="unitListComboBox" MaxWidth="200" HorizontalAlignment="Center" Width="200" SelectionChanged="unitListComboBox_SelectionChanged" >
-                    <ComboBoxItem>
-                        <StackPanel Orientation="Horizontal">
-                            <Grid Background="Gray">
-                                <Image Source="Assets/Converter/Angle.png" MaxHeight="25" MinWidth="25"/>
-                            </Grid>
-                            <TextBlock Text=" Angle" VerticalAlignment="Center"/>
-                        </StackPanel>
-                    </ComboBoxItem>
+        <StackPanel Orientation="Vertical">
 
-                    <ComboBoxItem>
-                        <StackPanel Orientation="Horizontal">
-                            <Grid Background="Gray">
-                                <Image Source="Assets/Converter/Data.png" MaxHeight="25" MinWidth="25"/>
-                            </Grid>
-                            <TextBlock Text=" Data" VerticalAlignment="Center"/>
-                        </StackPanel>
-                    </ComboBoxItem>
+            <TextBlock
+                x:Name="TextBlock1"
+                Margin="0,5"
+                HorizontalAlignment="Center"
+                FontSize="15"
+                Text="Select Unit Type" />
+            <ComboBox
+                x:Name="unitListComboBox"
+                Grid.Row="1"
+                Width="200"
+                MaxWidth="200"
+                HorizontalAlignment="Center"
+                SelectionChanged="unitListComboBox_SelectionChanged">
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Grid Background="Gray">
+                            <Image
+                                MinWidth="25"
+                                MaxHeight="25"
+                                Source="Assets/Converter/Angle.png" />
+                        </Grid>
+                        <TextBlock VerticalAlignment="Center" Text=" Angle" />
+                    </StackPanel>
+                </ComboBoxItem>
 
-                    <ComboBoxItem>
-                        <StackPanel Orientation="Horizontal">
-                            <Grid Background="Gray">
-                                <Image Source="Assets/Converter/Energy.png" MaxHeight="25" MinWidth="25"/>
-                            </Grid>
-                            <TextBlock Text=" Energy" VerticalAlignment="Center"/>
-                        </StackPanel>
-                    </ComboBoxItem>
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Grid Background="Gray">
+                            <Image
+                                MinWidth="25"
+                                MaxHeight="25"
+                                Source="Assets/Converter/Data.png" />
+                        </Grid>
+                        <TextBlock VerticalAlignment="Center" Text=" Data" />
+                    </StackPanel>
+                </ComboBoxItem>
 
-                    <ComboBoxItem>
-                        <StackPanel Orientation="Horizontal">
-                            <Grid Background="Gray">
-                                <Image Source="Assets/Converter/Hour.png" MaxHeight="25" MinWidth="25"/>
-                            </Grid>
-                            <TextBlock Text=" Time" VerticalAlignment="Center"/>
-                        </StackPanel>
-                    </ComboBoxItem>
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Grid Background="Gray">
+                            <Image
+                                MinWidth="25"
+                                MaxHeight="25"
+                                Source="Assets/Converter/Energy.png" />
+                        </Grid>
+                        <TextBlock VerticalAlignment="Center" Text=" Energy" />
+                    </StackPanel>
+                </ComboBoxItem>
 
-                    <ComboBoxItem>
-                        <StackPanel Orientation="Horizontal">
-                            <Grid Background="Gray">
-                                <Image Source="Assets/Converter/Length.png" MaxHeight="25" MinWidth="25"/>
-                            </Grid>
-                            <TextBlock Text=" Length" VerticalAlignment="Center"/>
-                        </StackPanel>
-                    </ComboBoxItem>
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Grid Background="Gray">
+                            <Image
+                                MinWidth="25"
+                                MaxHeight="25"
+                                Source="Assets/Converter/Hour.png" />
+                        </Grid>
+                        <TextBlock VerticalAlignment="Center" Text=" Time" />
+                    </StackPanel>
+                </ComboBoxItem>
 
-                    <ComboBoxItem>
-                        <StackPanel Orientation="Horizontal">
-                            <Grid Background="Gray">
-                                <Image Source="Assets/Converter/Power.png" MaxHeight="25" MinWidth="25"/>
-                            </Grid>
-                            <TextBlock Text=" Power" VerticalAlignment="Center"/>
-                        </StackPanel>
-                    </ComboBoxItem>
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Grid Background="Gray">
+                            <Image
+                                MinWidth="25"
+                                MaxHeight="25"
+                                Source="Assets/Converter/Length.png" />
+                        </Grid>
+                        <TextBlock VerticalAlignment="Center" Text=" Length" />
+                    </StackPanel>
+                </ComboBoxItem>
 
-                    <ComboBoxItem>
-                        <StackPanel Orientation="Horizontal">
-                            <Grid Background="Gray">
-                                <Image Source="Assets/Converter/Pressure.png" MaxHeight="25" MinWidth="25"/>
-                            </Grid>
-                            <TextBlock Text=" Pressure" VerticalAlignment="Center"/>
-                        </StackPanel>
-                    </ComboBoxItem>
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Grid Background="Gray">
+                            <Image
+                                MinWidth="25"
+                                MaxHeight="25"
+                                Source="Assets/Converter/Power.png" />
+                        </Grid>
+                        <TextBlock VerticalAlignment="Center" Text=" Power" />
+                    </StackPanel>
+                </ComboBoxItem>
 
-                    <ComboBoxItem>
-                        <StackPanel Orientation="Horizontal">
-                            <Grid Background="Gray">
-                                <Image Source="Assets/Converter/Speed.png" MaxHeight="25" MinWidth="25"/>
-                            </Grid>
-                            <TextBlock Text=" Speed" VerticalAlignment="Center"/>
-                        </StackPanel>
-                    </ComboBoxItem>
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Grid Background="Gray">
+                            <Image
+                                MinWidth="25"
+                                MaxHeight="25"
+                                Source="Assets/Converter/Pressure.png" />
+                        </Grid>
+                        <TextBlock VerticalAlignment="Center" Text=" Pressure" />
+                    </StackPanel>
+                </ComboBoxItem>
 
-                    <ComboBoxItem>
-                        <StackPanel Orientation="Horizontal">
-                            <Grid Background="Gray">
-                                <Image Source="Assets/Converter/Surface.png" MaxHeight="25" MinWidth="25"/>
-                            </Grid>
-                            <TextBlock Text=" Surface" VerticalAlignment="Center"/>
-                        </StackPanel>
-                    </ComboBoxItem>
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Grid Background="Gray">
+                            <Image
+                                MinWidth="25"
+                                MaxHeight="25"
+                                Source="Assets/Converter/Speed.png" />
+                        </Grid>
+                        <TextBlock VerticalAlignment="Center" Text=" Speed" />
+                    </StackPanel>
+                </ComboBoxItem>
 
-                    <ComboBoxItem>
-                        <StackPanel Orientation="Horizontal">
-                            <Grid Background="Gray">
-                                <Image Source="Assets/Converter/Temperature.png" MaxHeight="25" MinWidth="25"/>
-                            </Grid>
-                            <TextBlock Text=" Temperature" VerticalAlignment="Center"/>
-                        </StackPanel>
-                    </ComboBoxItem>
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Grid Background="Gray">
+                            <Image
+                                MinWidth="25"
+                                MaxHeight="25"
+                                Source="Assets/Converter/Surface.png" />
+                        </Grid>
+                        <TextBlock VerticalAlignment="Center" Text=" Surface" />
+                    </StackPanel>
+                </ComboBoxItem>
 
-                    <ComboBoxItem>
-                        <StackPanel Orientation="Horizontal">
-                            <Grid Background="Gray">
-                                <Image Source="Assets/Converter/Volume.png" MaxHeight="25" MinWidth="25"/>
-                            </Grid>
-                            <TextBlock Text=" Volume" VerticalAlignment="Center"/>
-                        </StackPanel>
-                    </ComboBoxItem>
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Grid Background="Gray">
+                            <Image
+                                MinWidth="25"
+                                MaxHeight="25"
+                                Source="Assets/Converter/Temperature.png" />
+                        </Grid>
+                        <TextBlock VerticalAlignment="Center" Text=" Temperature" />
+                    </StackPanel>
+                </ComboBoxItem>
 
-                    <ComboBoxItem>
-                        <StackPanel Orientation="Horizontal">
-                            <Grid Background="Gray">
-                                <Image Source="Assets/Converter/Weight.png" MaxHeight="25" MinWidth="25"/>
-                            </Grid>
-                            <TextBlock Text=" Weight" VerticalAlignment="Center"/>
-                        </StackPanel>
-                    </ComboBoxItem>
-                </ComboBox>
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Grid Background="Gray">
+                            <Image
+                                MinWidth="25"
+                                MaxHeight="25"
+                                Source="Assets/Converter/Volume.png" />
+                        </Grid>
+                        <TextBlock VerticalAlignment="Center" Text=" Volume" />
+                    </StackPanel>
+                </ComboBoxItem>
 
-                <TextBlock Text="Insert the unit you want to convert FROM" HorizontalAlignment="Center" Margin="0,30,0,0" 
-                           FontSize="15" x:Name="TextBlock2"/>
-                <ComboBox x:Name="fromUnitComboBox" HorizontalAlignment="Center" Margin="0,10" Width="170" SelectionChanged="fromUnitComboBox_SelectionChanged"/>
-                <TextBox x:Name="fromUnitTextBox" MaxWidth="200" TextChanged="fromUnitTextBox_TextChanged" IsUndoEnabled="True" UndoLimit="100"/>
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Grid Background="Gray">
+                            <Image
+                                MinWidth="25"
+                                MaxHeight="25"
+                                Source="Assets/Converter/Weight.png" />
+                        </Grid>
+                        <TextBlock VerticalAlignment="Center" Text=" Weight" />
+                    </StackPanel>
+                </ComboBoxItem>
+            </ComboBox>
 
-            <Button HorizontalAlignment="Center" x:Name="InvertButton" Margin="0,20" Grid.Column="2" Click="InvertButton_Click">
+            <TextBlock
+                x:Name="TextBlock2"
+                Margin="0,30,0,0"
+                HorizontalAlignment="Center"
+                FontSize="15"
+                Text="Insert the unit you want to convert FROM" />
+            <ComboBox
+                x:Name="fromUnitComboBox"
+                Width="170"
+                Margin="0,10"
+                HorizontalAlignment="Center"
+                SelectionChanged="fromUnitComboBox_SelectionChanged" />
+            <TextBox
+                x:Name="fromUnitTextBox"
+                MaxWidth="200"
+                IsUndoEnabled="True"
+                TextChanged="fromUnitTextBox_TextChanged"
+                UndoLimit="100" />
+
+            <Button
+                x:Name="InvertButton"
+                Grid.Column="2"
+                Margin="0,20"
+                HorizontalAlignment="Center"
+                Click="InvertButton_Click">
                 <Grid Width="75">
-                    <Image Source="Assets/Invert.png" MaxHeight="25" MaxWidth="25" HorizontalAlignment="Left"/>
-                    <TextBlock Text="Invert" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                    <Image
+                        MaxWidth="25"
+                        MaxHeight="25"
+                        HorizontalAlignment="Left"
+                        Source="Assets/Invert.png" />
+                    <TextBlock
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Center"
+                        Text="Invert" />
                 </Grid>
             </Button>
 
 
-            <TextBlock Text="Insert the unit you want to convert TO" HorizontalAlignment="Center" FontSize="15" 
-                           x:Name="TextBlock3" x:FieldModifier="public"/>
-                <ComboBox x:Name="toUnitComboBox" HorizontalAlignment="Center" Margin="0,10" Width="170" SelectionChanged="fromUnitComboBox_SelectionChanged"/>
-                <TextBox x:Name="toUnitTextBox" MaxWidth="200" IsReadOnly="True"/>
-            </StackPanel>
-        
-        
-        
+            <TextBlock
+                x:Name="TextBlock3"
+                HorizontalAlignment="Center"
+                x:FieldModifier="public"
+                FontSize="15"
+                Text="Insert the unit you want to convert TO" />
+            <ComboBox
+                x:Name="toUnitComboBox"
+                Width="170"
+                Margin="0,10"
+                HorizontalAlignment="Center"
+                SelectionChanged="fromUnitComboBox_SelectionChanged" />
+            <TextBox
+                x:Name="toUnitTextBox"
+                MaxWidth="200"
+                IsReadOnly="True" />
+        </StackPanel>
+
+
+
     </Grid>
 </UserControl>
