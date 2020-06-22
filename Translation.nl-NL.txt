@@ -1,79 +1,79 @@
 String to translate:
-[Language][Your name if you want credits]
+[Dutch][DelightedCat]
 
-Calculator, Scientific
+Calculator, Wetenschappelijk
 
 
-# Converter
-Select Unit Type
-Insert the unit you want to convert FROM
-Insert the unit you want to convert TO
-Invert
+# Converteerder
+Selecteer Type Eenheid
+Plaats de eenheid VANUIT WAAR u wilt converteren
+Plaats de eenheid WAARHEEN u wilt converteren
+Omkeren
 
-Angle, Data, Energy, Time, Length, Power, Pressure, Speed, Surface, Temperature, Volume, Weight
+Hoek, Gegevens, Energie, Tijd, Lengte, Stroom, Druk, Snelheid, Oppervlakte, Temperatuur, Volume, Gewicht
 
-Degrees, Radians, Grades
+Graden, Radialen, Rangen
 Bits, Octet, Kilobit, Kilo-octet / Kilobyte, Megabit, Megaoctet / Megabyte, Gigabit, Gigaoctet / Gigabyte, Terabit, Teraoctet / Terabyte, Petabit, Petaoctet / Petabyte, Exabit, Exaoctet / Exabyte, Zettabit, Zettaoctet / Zettabyte, Yottabit, Yottaoctet / Yottabyte
-Joule, Kilojoule, Food Calorie (Kcal)
-Microsecond, Millisecond, Second, Minute, Hour, Day, Week, Month, Year
-Nanometre, Micrometre, Millimetre, Centimetre ,Metre, Kilometre, Inches, Foot, Yard, Mile};
+Joule, Kilojoule, Voedselcalorie (Kcal)
+Microseconde, Milliseconde, Seconde, Minuut, Uur, Dag, Week, Maand, Jaar
+Nanometer, Micrometer, Millimeter, Centimeter ,Meter, Kilometer, Inches, Voet, Yard, Mijl};
 Watt, Kilowatt
-Atmosphere, Bar, Pascal
-Centimetre per Second, Metre per Second, Kilometre per Hour, Miles per Hour, Mach};
-Square Millimetre, Square Centimetre, Square Metre, Hectare, Square Kilometre, Square Inch, Square Foot, Square Yard, Square Mile,
+Atmosfeer, Bar, Pascal
+Centimeter per Seconde, Meter per Seconde, Kilometer per Uur, Mijl per Uur, Mach};
+Vierkante Millimeter, Vierkante Centimeter, Vierkante Meter, Hectare, Vierkante Kilometer, Vierkante Inch, Vierkante Voet, Vierkante Yard, Vierkante Mile,
 Celsuis, Fahrenheit, Kelvin
-Millilitre, Cubic Centimetre, Litre, Cubic Metre, Gallon, Cubic Inch, Cubic Foot
-Milligram, Centigram, Decigram, Gram, Decagram, Hectogram, Kilogram, Tonne, Ounce, Pound, Ton (US)
+Milliliter, Kubieke Centimeter, Liter, Kubieke Meter, Gallon, Kubieke Inch, Kubieke Voet
+Milligram, Centigram, Decigram, Gram, Decagram, Hectogram, Kilogram, Ton, Ons, Pond, Ton (US)
 
 
-# Currency
-Currency you want to convert FROM
-Currency AMOUNT
-Currency you want to convert TO
-Convert
-Available currencies
+# Valuta
+Valuta VANUIT WAAR u wilt converteren
+Valute HOEVEELHEID
+Valuta WAARHEEN u wilt converteren
+Converteren
+Beschikbare valuta
 
 
-# Date Calcul
-Date Difference
-From 
-To
-Difference
-Or x Total Days
+# Berekenen datum
+Verschil datum
+Van
+Naar
+Verschil
+Of x Totaal Aantal Dagen
 
-Add or Substract
-Select Date
-Add
-Substract
-Day / Days
-Month / Months
-Year / Years
-Date Result
-
-
-#Settings
-Theme
-Dark
-Light
-Default
-
-Use your own ARBG Hex Color
-Apply
+Optellen of Aftrekken
+Selecteer Datum
+Optellen
+Aftrekken
+Dag / Dagen
+Maand / Maanden
+Jaar / Jaren
+Uitkomst Datum
 
 
-# Minimal Mode
-In this textbox, you can directly type an expression and push Enter to get the result.
-Allowed symbols
+#Instellingen
+Thema
+Donker
+Licht
+Standaard
+
+Gebruik uw eigen ARBG Hex-kleur
+Toepassen
 
 
-# About
-Made by (Astyr)
-Developed in C# and WPF
+# Minimalistische modus
+In dit tekstvak kunt u direct een expressie intypen en op Enter drukken om het resultaat de krijgen.
+Toegestane symbolen
 
-Icons by (Icons8)
-RSS feed for currency converter provided by the ECB
 
-This work is under the GNU GPL 3 license, click for more information
+# Over
+Gemaakt door (Astyr)
+Ontwikkeld met C# en WPF
+
+Iconen door (Icons8)
+RSS feed voor valuta-conversie wordt geleverd door de ECB
+
+Dit werkt valt onder de GNU GPL 3 licensie, klik voor meer information
 
 (Use Google Traduction for this one please)
 Calc10, a multi-function calculator coded in C# and WPF.
@@ -95,5 +95,5 @@ You should have received a copy of the GNU General<LineBreak />
 Public License along with this program in root folder.<LineBreak />
 If not, seehttps://www.gnu.org/licenses/ .
 
-Close
+Sluiten
 
