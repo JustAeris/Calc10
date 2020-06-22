@@ -39,6 +39,7 @@ Decimal
 Hexadecimal
 Octet
 Binary
+Enter a number
 
 
 # Date Calcul
