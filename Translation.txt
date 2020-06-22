@@ -39,6 +39,7 @@ Decimal
 Hexadecimal
 Octal
 Binary
+Enter a type
 Enter a number
 
 
