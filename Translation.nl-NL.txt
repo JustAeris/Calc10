@@ -1,0 +1,85 @@
+String to translate:
+[Dutch][DelightedCat]
+
+Calculator, Wetenschappelijk
+
+
+# Converteerder
+Selecteer Type Eenheid
+Vul de eenheid VANUIT WAAR u wilt converteren in
+Vul de eenheid WAARHEEN u wilt converteren in
+Omkeren
+
+Hoek, Gegevens, Energie, Tijd, Lengte, Kracht, Druk, Snelheid, Oppervlakte, Temperatuur, Volume, Gewicht
+
+Graden, Radialen, Rangen
+Bits, Octet, Kilobit, Kilo-octet / Kilobyte, Megabit, Megaoctet / Megabyte, Gigabit, Gigaoctet / Gigabyte, Terabit, Teraoctet / Terabyte, Petabit, Petaoctet / Petabyte, Exabit, Exaoctet / Exabyte, Zettabit, Zettaoctet / Zettabyte, Yottabit, Yottaoctet / Yottabyte
+Joule, Kilojoule, Voedingscalorie (Kcal)
+Microseconde, Milliseconde, Seconde, Minuut, Uur, Dag, Week, Maand, Jaar
+Nanometer, Micrometer, Millimeter, Centimeter, Meter, Kilometer, Inches, Voet, Yard, Mijl
+Watt, Kilowatt
+Atmosfeer, Bar, Pascal
+Centimeter per Seconde, Meter per Seconde, Kilometer per Uur, Mijl per Uur, Mach
+Vierkante Millimeter, Vierkante Centimeter, Vierkante Meter, Hectare, Vierkante Kilometer, Vierkante Inch, Vierkante Voet, Vierkante Yard, Vierkante Mijl
+Celsius, Fahrenheit, Kelvin
+Milliliter, Kubieke Centimeter, Liter, Kubieke Meter, Gallon, Kubieke Inch, Kubieke Voet
+Milligram, Centigram, Decigram, Gram, Decagram, Hectogram, Kilogram, Ton, Ons, Pond, Ton (VS)
+
+
+# Valuta
+Valuta VANUIT WAAR u wilt converteren
+Valute HOEVEELHEID
+Valuta WAARHEEN u wilt converteren
+Converteren
+Beschikbare valuta
+
+
+# Programmeur
+Decimaal
+Hexadecimaal
+Octet
+Binair
+Voer een getal in
+
+
+# Berekenen datum
+Verschil datum
+Van
+Naar
+Verschil
+Of x Totaal Aantal Dagen
+
+Optellen of Aftrekken
+Selecteer Datum
+Optellen
+Aftrekken
+Dag / Dagen
+Maand / Maanden
+Jaar / Jaren
+Uitkomst Datum
+
+
+# Instellingen
+Thema
+Donker
+Licht
+Standaard
+
+Gebruik uw eigen ARBG Hex-kleur
+Toepassen
+
+
+# Minimalistische Modus
+In dit tekstvak kunt u direct een expressie intypen en op Enter drukken om het resultaat te krijgen.
+Toegestane symbolen
+
+
+# Over
+Gemaakt door (Astyr)
+Ontwikkeld met C# en WPF
+
+Iconen door (Icons8)
+RSS feed voor valuta-conversie wordt voorzien door de ECB
+
+Sluiten
+
