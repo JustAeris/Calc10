@@ -1,0 +1,86 @@
+String to translate:
+[Language][Your name if you want credits][Social, only one, if you want]
+
+Calculator, Scientific
+
+
+# Converter
+Select Unit Type
+Insert the unit you want to convert FROM
+Insert the unit you want to convert TO
+Invert
+
+Angle, Data, Energy, Time, Length, Power, Pressure, Speed, Surface, Temperature, Volume, Weight
+
+Degrees, Radians, Grades
+Bits, Octet, Kilobit, Kilo-octet / Kilobyte, Megabit, Megaoctet / Megabyte, Gigabit, Gigaoctet / Gigabyte, Terabit, Teraoctet / Terabyte, Petabit, Petaoctet / Petabyte, Exabit, Exaoctet / Exabyte, Zettabit, Zettaoctet / Zettabyte, Yottabit, Yottaoctet / Yottabyte
+Joule, Kilojoule, Food Calorie (Kcal)
+Microsecond, Millisecond, Second, Minute, Hour, Day, Week, Month, Year
+Nanometre, Micrometre, Millimetre, Centimetre, Metre, Kilometre, Inches, Foot, Yard, Mile
+Watt, Kilowatt
+Atmosphere, Bar, Pascal
+Centimetre per Second, Metre per Second, Kilometre per Hour, Miles per Hour, Mach};
+Square Millimetre, Square Centimetre, Square Metre, Hectare, Square Kilometre, Square Inch, Square Foot, Square Yard, Square Mile
+Celsius, Fahrenheit, Kelvin
+Millilitre, Cubic Centimetre, Litre, Cubic Metre, Gallon, Cubic Inch, Cubic Foot
+Milligram, Centigram, Decigram, Gram, Decagram, Hectogram, Kilogram, Tonne, Ounce, Pound, Ton (US)
+
+
+# Currency
+Currency you want to convert FROM
+Currency AMOUNT
+Currency you want to convert TO
+Convert
+Available currencies
+
+
+# Programmer
+Decimal
+Hexadecimal
+Octal
+Binary
+Enter a type
+Enter a number
+
+
+# Date Calcul
+Date Difference
+From 
+To
+Difference
+Or x Total Days
+
+Add or Substract
+Select Date
+Add
+Substract
+Day / Days
+Month / Months
+Year / Years
+Date Result
+
+
+# Settings
+Theme
+Dark
+Light
+Default
+
+Use your own ARBG Hex Color
+Apply
+
+
+# Minimal Mode
+In this textbox, you can directly type an expression and push Enter to get the result.
+Allowed symbols
+
+
+# About
+Made by (Astyr)
+Developed in C# and WPF
+
+Icons by (Icons8)
+RSS feed for currency converter provided by the ECB
+
+Close
+
