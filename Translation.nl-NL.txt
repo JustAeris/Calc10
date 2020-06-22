@@ -79,7 +79,7 @@ Gemaakt door (Astyr)
 Ontwikkeld met C# en WPF
 
 Iconen door (Icons8)
-RSS feed voor valuta-conversie wordt geleverd door de ECB
+RSS feed voor valuta-conversie wordt voorzien door de ECB
 
 Sluiten
 
