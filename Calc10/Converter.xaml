@@ -172,11 +172,10 @@
                 </ComboBoxItem>
             </ComboBox>
 
-            <Separator Margin="0,20"/>
+            <Separator Margin="0,20" />
 
             <TextBlock
                 x:Name="TextBlock2"
-                
                 HorizontalAlignment="Center"
                 FontSize="15"
                 Text="Insert the unit you want to convert FROM" />

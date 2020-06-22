@@ -17,7 +17,7 @@
             <StackPanel Orientation="Horizontal">
                 <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
             </StackPanel>
-            
+
             <StackPanel Margin="5" Orientation="Vertical">
                 <Button
                     x:Name="powerButton"
