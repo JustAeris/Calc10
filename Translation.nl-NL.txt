@@ -81,27 +81,5 @@ Ontwikkeld met C# en WPF
 Iconen door (Icons8)
 RSS feed voor valuta-conversie wordt geleverd door de ECB
 
-Dit werkt valt onder de GNU GPL 3 licensie, klik voor meer informatie
-
-(Use Google Translate for this one please)
-Calc10, a multi-function calculator coded in C# and WPF.
-Copyright (C) 2020 Astyr
-
-This program is free software: you can redistribute it
-and/or modify it under the terms of the GNU General
-Public License as published by the Free Software
-Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will
-be useful, but WITHOUT ANY WARRANTY; without even
-the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU General
-Public License for more details.
-
-You should have received a copy of the GNU General<LineBreak />
-Public License along with this program in root folder.<LineBreak />
-If not, see https://www.gnu.org/licenses/.
-
 Sluiten
 
