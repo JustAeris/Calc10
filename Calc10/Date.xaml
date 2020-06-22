@@ -22,6 +22,7 @@
                 <TextBlock Text="Date Difference" />
                 <TextBlock Text="Add or Substract" />
             </ComboBox>
+            <Separator/>
             <StackPanel
                 x:Name="difference"
                 Margin="10"
