@@ -149,6 +149,8 @@
 
                 <local2:Date x:Name="DateUI" Visibility="Hidden" />
 
+                <local2:Programmer x:Name="ProgrammerUI" Visibility="Hidden"/>
+
 
             </Grid>
         </ui:NavigationView>

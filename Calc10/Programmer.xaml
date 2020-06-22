@@ -1,0 +1,44 @@
+﻿<UserControl
+    x:Class="Calc10.Programmer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Calc10"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ui="http://schemas.modernwpf.com/2019"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" Orientation="Vertical" Width="200">
+            <TextBlock Text="Enter a Type" FontSize="15" Margin="0,10,0,0"/>
+            <ComboBox Margin="0,5,0,0" Width="200">
+                <TextBlock Text="Decimal" TextAlignment="Center"/>
+                <TextBlock Text="Hexadecimal" TextAlignment="Center"/>
+                <TextBlock Text="Octet" TextAlignment="Center"/>
+                <TextBlock Text="Binary" TextAlignment="Center"/>
+            </ComboBox>
+            <TextBlock Text="Enter a Number" FontSize="15"/>
+            <TextBox CharacterCasing="Upper" Margin="0,0,0,10" Width="200"/>
+
+            <Separator/>
+
+            <StackPanel >
+                <TextBlock Text="Decimal"/>
+                <TextBox x:Name="DecimalResult" IsReadOnly="True" Margin="0,0,0,10"/>
+            </StackPanel>
+            <StackPanel >
+                <TextBlock Text="Hexadecimal"/>
+                <TextBox x:Name="HexadecimalResult" IsReadOnly="True" Margin="0,0,0,10"/>
+            </StackPanel>
+            <StackPanel >
+                <TextBlock Text="Octet"/>
+                <TextBox x:Name="OctetResult" IsReadOnly="True" Margin="0,0,0,10"/>
+            </StackPanel>
+            <StackPanel >
+                <TextBlock Text="Binary"/>
+                <TextBox x:Name="BinaryResult" IsReadOnly="True"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

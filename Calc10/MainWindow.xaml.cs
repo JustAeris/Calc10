@@ -182,7 +182,7 @@ namespace WPFModernUITest
             if (SelectedIndex == 4)
                 CustomHeader.Text = " Scientific";
             if (SelectedIndex == 5)
-                CustomHeader.Text = " Programmer WIP";
+                CustomHeader.Text = " Programmer";
             if (SelectedIndex == 6)
                 CustomHeader.Text = " Date Calcul";
             if (SelectedIndex == 7)
@@ -193,7 +193,7 @@ namespace WPFModernUITest
             ThemeSettingsUI.Visibility = Visibility.Hidden;
             ConverterUI.Visibility = Visibility.Hidden;
             ScientificUI.Visibility = Visibility.Hidden;
-
+            ProgrammerUI.Visibility = Visibility.Hidden;
             DateUI.Visibility = Visibility.Hidden;
 
             MainWindows.Width = 370;
@@ -221,8 +221,11 @@ namespace WPFModernUITest
                 ScientificUI.Visibility = Visibility.Visible;
                 MainWindows.Width = 620;
             }
-            //if (SelectedIndex != 5)
-            //    NavView.Header = "WIP";
+            if (SelectedIndex == 5)
+            {
+                ProgrammerUI.Visibility = Visibility.Visible;
+            }
+           
             if (SelectedIndex == 6)
             {
                 DateUI.Visibility = Visibility.Visible;
