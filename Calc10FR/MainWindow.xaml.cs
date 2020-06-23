@@ -173,9 +173,9 @@ namespace WPFModernUITest
         {
             if (NavView.SelectedItem == CalcNavView)
                 SelectedIndex = 1;
-            else if (NavView.SelectedItem == CurrencyNavView)
-                SelectedIndex = 2;
             else if (NavView.SelectedItem == ConverterNavView)
+                SelectedIndex = 2;
+            else if (NavView.SelectedItem == CurrencyNavView)
                 SelectedIndex = 3;
             else if (NavView.SelectedItem == ScientificNavView)
                 SelectedIndex = 4;
@@ -226,6 +226,7 @@ namespace WPFModernUITest
             {
                 CurrencyUI.Visibility = Visibility.Visible;
                 MainWindows.Height = 600;
+                MainWindows.Width = 400;
                 if (!CheckForInternetConnection())
                     MessageBox.Show("The Currency Converter won't work without Internet Connection.", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
             }

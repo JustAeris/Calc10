@@ -164,7 +164,7 @@ namespace WPFModernUITest
                 ProgrammerUI.textBlock6.Foreground = Brushes.Black;
             }
             CustomHeader.Text = " Calculator";
-
+            NavView.SelectedItem = CalcNavView;
         }
 
         //Navigation View Management

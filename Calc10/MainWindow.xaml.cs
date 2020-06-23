@@ -164,7 +164,7 @@ namespace WPFModernUITest
                 ProgrammerUI.textBlock6.Foreground = Brushes.Black;
             }
             CustomHeader.Text = " Calculator";
-
+            NavView.SelectedItem = CalcNavView;
         }
 
         //Navigation View Management
@@ -173,9 +173,9 @@ namespace WPFModernUITest
         {
             if (NavView.SelectedItem == CalcNavView)
                 SelectedIndex = 1;
-            else if (NavView.SelectedItem == CurrencyNavView)
-                SelectedIndex = 2;
             else if (NavView.SelectedItem == ConverterNavView)
+                SelectedIndex = 2;
+            else if (NavView.SelectedItem == CurrencyNavView)
                 SelectedIndex = 3;
             else if (NavView.SelectedItem == ScientificNavView)
                 SelectedIndex = 4;
