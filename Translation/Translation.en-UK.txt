@@ -51,6 +51,7 @@ Select Date
 Add
 Substract
 Day / Days
+Week / Weeks
 Month / Months
 Year / Years
 Date Result
@@ -61,6 +62,7 @@ Theme
 Dark
 Light
 Default
+Choose Accent Color
 Use your own ARBG Hex Color
 Apply
 
