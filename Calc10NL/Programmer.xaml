@@ -1,0 +1,83 @@
+﻿<UserControl
+    x:Class="Calc10.Programmer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Calc10"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ui="http://schemas.modernwpf.com/2019"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    Loaded="UserControl_Loaded"
+    mc:Ignorable="d">
+    <Grid>
+        <StackPanel
+            Width="200"
+            HorizontalAlignment="Center"
+            Orientation="Vertical">
+            <TextBlock
+                Margin="0,10,0,0"
+                FontSize="15"
+                Text="Voer een type in" />
+            <ComboBox
+                x:Name="numberType"
+                Width="200"
+                SelectionChanged="numberType_SelectionChanged">
+                <TextBlock Text="Decimaal" TextAlignment="Center" />
+                <TextBlock Text="Hexadecimaal" TextAlignment="Center" />
+                <TextBlock Text="Octal" TextAlignment="Center" />
+                <TextBlock Text="Binair" TextAlignment="Center" />
+            </ComboBox>
+            <TextBlock
+                Margin="0,10,0,0"
+                FontSize="15"
+                Text="Voer een getal in" />
+            <TextBox
+                x:Name="numberTextBox"
+                Width="200"
+                Margin="0,0,0,10"
+                CharacterCasing="Upper"
+                TextChanged="numberTextBox_TextChanged">
+                <TextBox.ToolTip>
+                    <ToolTip>
+                        <TextBlock>
+                            Allowed Characters for each value :<LineBreak />
+                            Decimal : 1 2 3 4 5 6 7 8 9 0<LineBreak />
+                            Hexadecimal : 1 2 3 4 5 6 7 8 9 0 A B C D E F<LineBreak />
+                            Octal : 1 2 3 4 5 6 7 0<LineBreak />
+                            Binary : 1 0</TextBlock>
+                    </ToolTip>
+                </TextBox.ToolTip>
+            </TextBox>
+
+            <Separator Margin="0,10" />
+
+            <StackPanel>
+                <TextBlock Text="Decimaal" />
+                <TextBox
+                    x:Name="DecimalResult"
+                    Margin="0,0,0,10"
+                    IsReadOnly="True" />
+            </StackPanel>
+            <StackPanel>
+                <TextBlock Text="Hexadecimaal" />
+                <TextBox
+                    x:Name="HexadecimalResult"
+                    Margin="0,0,0,10"
+                    CharacterCasing="Upper"
+                    IsReadOnly="True" />
+            </StackPanel>
+            <StackPanel>
+                <TextBlock Text="Octal" />
+                <TextBox
+                    x:Name="OctalResult"
+                    Margin="0,0,0,10"
+                    IsReadOnly="True" />
+            </StackPanel>
+            <StackPanel>
+                <TextBlock Text="Binair" />
+                <TextBox x:Name="BinaryResult" IsReadOnly="True" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

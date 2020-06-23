@@ -47,31 +47,31 @@
 
                 <ui:NavigationViewItemSeparator />
 
-                <ui:NavigationViewItem Content="Converter" x:Name="ConverterNavView">
+                <ui:NavigationViewItem Content="Converteerder" x:Name="ConverterNavView">
                     <ui:NavigationViewItem.Icon>
                         <ui:BitmapIcon UriSource="Assets/Conversion.png" />
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
 
-                <ui:NavigationViewItem Content="Currency" x:Name="CurrencyNavView">
+                <ui:NavigationViewItem Content="Valuta" x:Name="CurrencyNavView">
                     <ui:NavigationViewItem.Icon>
                         <ui:BitmapIcon UriSource="Assets/Currency.png" />
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
 
-                <ui:NavigationViewItem Content="Scientific" x:Name="ScientificNavView">
+                <ui:NavigationViewItem Content="Wetenschappelijk" x:Name="ScientificNavView">
                     <ui:NavigationViewItem.Icon>
                         <ui:BitmapIcon UriSource="Assets/Scientific.png" />
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
 
-                <ui:NavigationViewItem Content="Programmer" x:Name="ProgNavView">
+                <ui:NavigationViewItem Content="Programmeur" x:Name="ProgNavView">
                     <ui:NavigationViewItem.Icon>
                         <ui:BitmapIcon UriSource="Assets/Programmer.png" />
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
 
-                <ui:NavigationViewItem Content="Date Calcul" x:Name="DateNavView">
+                <ui:NavigationViewItem Content="Berekenen Datum" x:Name="DateNavView">
                     <ui:NavigationViewItem.Icon>
                         <ui:BitmapIcon UriSource="Assets/Date.png" />
                     </ui:NavigationViewItem.Icon>

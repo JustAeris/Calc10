@@ -1,0 +1,84 @@
+﻿<Window
+    x:Class="Calc10.About"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Calc10"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ui="http://schemas.modernwpf.com/2019"
+    Title="Over"
+    Width="500"
+    Height="250"
+    Background="{DynamicResource SystemControlPageBackgroundChromeMediumLowBrush}"
+    Topmost="True"
+    WindowStyle="ToolWindow"
+    mc:Ignorable="d">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel
+                Margin="0,10"
+                HorizontalAlignment="Center"
+                Orientation="Horizontal">
+                <Image
+                    MaxHeight="64"
+                    Margin="-64,0"
+                    Source="Assets/Info.ico" />
+                <TextBlock Margin="0,0,0,0" TextAlignment="Center">
+                    <Bold>Calc10</Bold><LineBreak />
+                    Gemaakt door Astyr<LineBreak />
+                    Ontwikkeld met C# en WPF<LineBreak />
+                    <LineBreak />
+                    Iconen door<Hyperlink NavigateUri="https://icons8.com" RequestNavigate="Hyperlink_RequestNavigate_1">Icons8</Hyperlink><LineBreak />
+                    RSS feed voor valuta-conversie wordt voorzien door de<Hyperlink NavigateUri="https://www.ecb.europa.eu/home/html/rss.en.html" RequestNavigate="Hyperlink_RequestNavigate_2">ECB</Hyperlink>
+                </TextBlock>
+            </StackPanel>
+
+
+            <ui:DropDownButton
+                Margin="10"
+                HorizontalAlignment="Center"
+                Content="This work is under the GNU GPL 3 license, click for more information">
+                <ui:DropDownButton.Flyout>
+                    <ui:Flyout Placement="Bottom">
+                        <TextBlock
+                            x:Name="aboutTextBox"
+                            Margin="10"
+                            HorizontalAlignment="Center"
+                            FontFamily="Courier New"
+                            FontSize="12"
+                            FontWeight="Light"
+                            TextAlignment="Left">
+                            Calc10, a multi-function calculator coded in C# and WPF.<LineBreak />
+                            Copyright (C) 2020  Astyr<LineBreak />
+                            <LineBreak />
+                            This program is free software: you can redistribute it<LineBreak />
+                            and/or modify it under the terms of the GNU General<LineBreak />
+                            Public License as published by the Free Software<LineBreak />
+                            Foundation, either version 3 of the License, or<LineBreak />
+                            (at your option) any later version.<LineBreak />
+                            <LineBreak />
+                            This program is distributed in the hope that it will<LineBreak />
+                            be useful, but WITHOUT ANY WARRANTY; without even<LineBreak />
+                            the implied warranty of MERCHANTABILITY or FITNESS<LineBreak />
+                            FOR A PARTICULAR PURPOSE.  See the GNU General<LineBreak />
+                            Public License for more details.<LineBreak />
+                            <LineBreak />
+                            You should have received a copy of the GNU General<LineBreak />
+                            Public License along with this program in root folder.<LineBreak />
+                            If not, see<Underline>
+                                <Hyperlink NavigateUri="https://www.gnu.org/licenses/licenses.en.html" RequestNavigate="Hyperlink_RequestNavigate">https://www.gnu.org/licenses/</Hyperlink>
+                            </Underline>
+                            .</TextBlock>
+                    </ui:Flyout>
+
+                </ui:DropDownButton.Flyout>
+            </ui:DropDownButton>
+
+
+            <Button
+                HorizontalAlignment="Center"
+                Click="Button_Click"
+                Content="Sluiten" />
+        </StackPanel>
+    </Grid>
+</Window>

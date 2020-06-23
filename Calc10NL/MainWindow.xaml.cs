@@ -161,9 +161,9 @@ namespace WPFModernUITest
         {
             if (NavView.SelectedItem == CalcNavView)
                 SelectedIndex = 1;
-            else if (NavView.SelectedItem == CurrencyNavView)
-                SelectedIndex = 2;
             else if (NavView.SelectedItem == ConverterNavView)
+                SelectedIndex = 2;
+            else if (NavView.SelectedItem == CurrencyNavView)
                 SelectedIndex = 3;
             else if (NavView.SelectedItem == ScientificNavView)
                 SelectedIndex = 4;
@@ -177,17 +177,17 @@ namespace WPFModernUITest
             if (SelectedIndex == 1)
                 CustomHeader.Text = " Calculator";
             if (SelectedIndex == 2)
-                CustomHeader.Text = " Converter";
+                CustomHeader.Text = " Converteerder";
             if (SelectedIndex == 3)
-                CustomHeader.Text = " Currency";
+                CustomHeader.Text = " Valuta";
             if (SelectedIndex == 4)
-                CustomHeader.Text = " Scientific";
+                CustomHeader.Text = " Wetenschappelijk";
             if (SelectedIndex == 5)
-                CustomHeader.Text = " Programmer";
+                CustomHeader.Text = " Programmeur";
             if (SelectedIndex == 6)
-                CustomHeader.Text = " Date Calcul";
+                CustomHeader.Text = " Berekenen Datum";
             if (SelectedIndex == 7)
-                CustomHeader.Text = " Settings";
+                CustomHeader.Text = " Instellingen";
 
             CalcUI.Visibility = Visibility.Hidden;
             CurrencyUI.Visibility = Visibility.Hidden;
