@@ -62,6 +62,7 @@ Theme
 Dark
 Light
 Default
+Choose Accent Color
 Use your own ARBG Hex Color
 Apply
 
