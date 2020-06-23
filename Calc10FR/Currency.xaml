@@ -27,7 +27,7 @@
             <TextBlock
                 x:Name="TextBox1"
                 HorizontalAlignment="Center"
-                FontSize="15"
+                FontSize="14"
                 Text="Devise à partir de laquelle vous souhaitez convertir" />
             <ComboBox
                 x:Name="CurrencyListFROM"
