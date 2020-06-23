@@ -51,6 +51,7 @@ Select Date
 Add
 Substract
 Day / Days
+Week / Weeks
 Month / Months
 Year / Years
 Date Result
