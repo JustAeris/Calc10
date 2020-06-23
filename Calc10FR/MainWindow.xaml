@@ -1,0 +1,161 @@
+﻿<Window
+    x:Class="WPFModernUITest.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:WPFModernUITest"
+    xmlns:local2="clr-namespace:Calc10"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc="mi"
+    xmlns:sc="clr-namespace:SamplesCommon;assembly=SamplesCommon"
+    xmlns:ui="http://schemas.modernwpf.com/2019"
+    x:Name="MainWindows"
+    Title="Calc10"
+    Width="370"
+    Height="450"
+    MinWidth="370"
+    MinHeight="450"
+    ui:ThemeManager.RequestedTheme="Default"
+    ui:TitleBar.IsBackButtonVisible="True"
+    Background="{DynamicResource SystemControlPageBackgroundChromeMediumLowBrush}"
+    Icon="Assets/AppIcon.ico"
+    Loaded="MainWindows_Loaded"
+    ResizeMode="CanMinimize"
+    mc:Ignorable="d">
+
+
+    <Grid>
+
+        <ui:NavigationView
+            x:Name="NavView"
+            Grid.RowSpan="3"
+            Grid.Column="0"
+            Header=""
+            IsBackButtonVisible="Collapsed"
+            IsPaneOpen="False"
+            IsPaneToggleButtonVisible="True"
+            IsSettingsVisible="True"
+            IsTabStop="True"
+            OpenPaneLength="200"
+            PaneDisplayMode="LeftCompact"
+            PaneTitle="Calc10"
+            SelectionChanged="NavigationView_SelectionChanged"
+            SelectionFollowsFocus="Enabled">
+
+            <ui:NavigationView.MenuItems>
+                <ui:NavigationViewItem
+                    x:Name="CalcNavView"
+                    Content="Calculatrice"
+                    Icon="Calculator" />
+
+                <ui:NavigationViewItemSeparator />
+
+                <ui:NavigationViewItem x:Name="ConverterNavView" Content="Convertisseur">
+                    <ui:NavigationViewItem.Icon>
+                        <ui:BitmapIcon UriSource="Assets/Conversion.png" />
+                    </ui:NavigationViewItem.Icon>
+                </ui:NavigationViewItem>
+
+                <ui:NavigationViewItem x:Name="CurrencyNavView" Content="Devise">
+                    <ui:NavigationViewItem.Icon>
+                        <ui:BitmapIcon UriSource="Assets/Currency.png" />
+                    </ui:NavigationViewItem.Icon>
+                </ui:NavigationViewItem>
+
+                <ui:NavigationViewItem x:Name="ScientificNavView" Content="Scientifique">
+                    <ui:NavigationViewItem.Icon>
+                        <ui:BitmapIcon UriSource="Assets/Scientific.png" />
+                    </ui:NavigationViewItem.Icon>
+                </ui:NavigationViewItem>
+
+                <ui:NavigationViewItem x:Name="ProgNavView" Content="Programmeur">
+                    <ui:NavigationViewItem.Icon>
+                        <ui:BitmapIcon UriSource="Assets/Programmer.png" />
+                    </ui:NavigationViewItem.Icon>
+                </ui:NavigationViewItem>
+
+                <ui:NavigationViewItem x:Name="DateNavView" Content="Calcul de Date">
+                    <ui:NavigationViewItem.Icon>
+                        <ui:BitmapIcon UriSource="Assets/Date.png" />
+                    </ui:NavigationViewItem.Icon>
+                </ui:NavigationViewItem>
+
+            </ui:NavigationView.MenuItems>
+
+            <Grid>
+
+
+                <TextBlock
+                    x:Name="CustomHeader"
+                    Grid.Column="0"
+                    Margin="0,-50,0,0"
+                    FontFamily="Segoe UI Light"
+                    FontSize="30"
+                    Text=" Calc10" />
+                <Button
+                    x:Name="aboutButton"
+                    Grid.Column="0"
+                    Margin="0,-40,5,0"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
+                    Click="aboutButton_Click">
+                    <Image
+                        Width="20"
+                        Height="20"
+                        Margin="-5"
+                        Source="Assets/About.png" />
+                    <Button.ToolTip>
+                        <ToolTip>
+                            A propos
+                        </ToolTip>
+                    </Button.ToolTip>
+                </Button>
+
+                <local:Calc
+                    x:Name="CalcUI"
+                    Grid.Column="0"
+                    Margin="0,10,0,0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Bottom"
+                    Visibility="Visible" />
+
+                <local:Settings
+                    x:Name="ThemeSettingsUI"
+                    Grid.Row="0"
+                    Margin="5,10"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    PreviewMouseLeftButtonUp="ThemeSettingsUI_PreviewMouseLeftButtonUp"
+                    Visibility="Hidden" />
+
+                <local:Currency
+                    x:Name="CurrencyUI"
+                    Grid.Row="0"
+                    Margin="5"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Visibility="Hidden" />
+
+                <local:Converter
+                    x:Name="ConverterUI"
+                    Grid.Row="0"
+                    Margin="5,10"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Visibility="Hidden" />
+
+                <local2:Scientific
+                    x:Name="ScientificUI"
+                    Margin="280,0,0,0"
+                    VerticalAlignment="Bottom"
+                    Visibility="Hidden" />
+
+                <local2:Date x:Name="DateUI" Visibility="Hidden" />
+
+                <local2:Programmer x:Name="ProgrammerUI" Visibility="Hidden" />
+
+
+            </Grid>
+        </ui:NavigationView>
+    </Grid>
+</Window>
