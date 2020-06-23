@@ -71,7 +71,7 @@
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
 
-                <ui:NavigationViewItem Content="Date Calcul">
+                <ui:NavigationViewItem Content="Date Calcul" x:Name="DateNavView">
                     <ui:NavigationViewItem.Icon>
                         <ui:BitmapIcon UriSource="Assets/Date.png" />
                     </ui:NavigationViewItem.Icon>
