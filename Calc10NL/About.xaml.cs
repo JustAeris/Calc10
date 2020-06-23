@@ -43,5 +43,10 @@ namespace Calc10
         {
             System.Diagnostics.Process.Start("https://www.ecb.europa.eu/home/html/rss.en.html");
         }
+
+        private void Hyperlink_RequestNavigate_3(object sender, System.Windows.Navigation.RequestNavigateEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://twitter.com/DelightedCat");
+        }
     }
 }

@@ -130,6 +130,12 @@ namespace WPFModernUITest
                 DateUI.TextBlock6.Foreground = Brushes.White;
                 DateUI.TextBlock7.Foreground = Brushes.White;
                 DateUI.TextBlock8.Foreground = Brushes.White;
+                ProgrammerUI.textBlock1.Foreground = Brushes.White;
+                ProgrammerUI.textBlock2.Foreground = Brushes.White;
+                ProgrammerUI.textBlock3.Foreground = Brushes.White;
+                ProgrammerUI.textBlock4.Foreground = Brushes.White;
+                ProgrammerUI.textBlock5.Foreground = Brushes.White;
+                ProgrammerUI.textBlock6.Foreground = Brushes.White;
             }
             if (ThemeManager.Current.ActualApplicationTheme == ApplicationTheme.Light)
             {
@@ -150,6 +156,12 @@ namespace WPFModernUITest
                 DateUI.TextBlock6.Foreground = Brushes.Black;
                 DateUI.TextBlock7.Foreground = Brushes.Black;
                 DateUI.TextBlock8.Foreground = Brushes.Black;
+                ProgrammerUI.textBlock1.Foreground = Brushes.Black;
+                ProgrammerUI.textBlock2.Foreground = Brushes.Black;
+                ProgrammerUI.textBlock3.Foreground = Brushes.Black;
+                ProgrammerUI.textBlock4.Foreground = Brushes.Black;
+                ProgrammerUI.textBlock5.Foreground = Brushes.Black;
+                ProgrammerUI.textBlock6.Foreground = Brushes.Black;
             }
             CustomHeader.Text = " Calculator";
 
@@ -265,6 +277,12 @@ namespace WPFModernUITest
                 DateUI.TextBlock6.Foreground = Brushes.White;
                 DateUI.TextBlock7.Foreground = Brushes.White;
                 DateUI.TextBlock8.Foreground = Brushes.White;
+                ProgrammerUI.textBlock1.Foreground = Brushes.White;
+                ProgrammerUI.textBlock2.Foreground = Brushes.White;
+                ProgrammerUI.textBlock3.Foreground = Brushes.White;
+                ProgrammerUI.textBlock4.Foreground = Brushes.White;
+                ProgrammerUI.textBlock5.Foreground = Brushes.White;
+                ProgrammerUI.textBlock6.Foreground = Brushes.White;
             }
             if (ThemeManager.Current.ActualApplicationTheme == ApplicationTheme.Light)
             {
@@ -285,6 +303,12 @@ namespace WPFModernUITest
                 DateUI.TextBlock6.Foreground = Brushes.Black;
                 DateUI.TextBlock7.Foreground = Brushes.Black;
                 DateUI.TextBlock8.Foreground = Brushes.Black;
+                ProgrammerUI.textBlock1.Foreground = Brushes.Black;
+                ProgrammerUI.textBlock2.Foreground = Brushes.Black;
+                ProgrammerUI.textBlock3.Foreground = Brushes.Black;
+                ProgrammerUI.textBlock4.Foreground = Brushes.Black;
+                ProgrammerUI.textBlock5.Foreground = Brushes.Black;
+                ProgrammerUI.textBlock6.Foreground = Brushes.Black;
             }
         }
 

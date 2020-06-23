@@ -16,6 +16,7 @@
             HorizontalAlignment="Center"
             Orientation="Vertical">
             <TextBlock
+                x:Name="textBlock1"
                 Margin="0,10,0,0"
                 FontSize="15"
                 Text="Voer een type in" />
@@ -29,6 +30,7 @@
                 <TextBlock Text="Binair" TextAlignment="Center" />
             </ComboBox>
             <TextBlock
+                x:Name="textBlock2"
                 Margin="0,10,0,0"
                 FontSize="15"
                 Text="Voer een getal in" />
@@ -53,14 +55,14 @@
             <Separator Margin="0,10" />
 
             <StackPanel>
-                <TextBlock Text="Decimaal" />
+                <TextBlock x:Name="textBlock3" Text="Decimaal" />
                 <TextBox
                     x:Name="DecimalResult"
                     Margin="0,0,0,10"
                     IsReadOnly="True" />
             </StackPanel>
             <StackPanel>
-                <TextBlock Text="Hexadecimaal" />
+                <TextBlock x:Name="textBlock4" Text="Hexadecimaal" />
                 <TextBox
                     x:Name="HexadecimalResult"
                     Margin="0,0,0,10"
@@ -68,14 +70,14 @@
                     IsReadOnly="True" />
             </StackPanel>
             <StackPanel>
-                <TextBlock Text="Octal" />
+                <TextBlock x:Name="textBlock5" Text="Octal" />
                 <TextBox
                     x:Name="OctalResult"
                     Margin="0,0,0,10"
                     IsReadOnly="True" />
             </StackPanel>
             <StackPanel>
-                <TextBlock Text="Binair" />
+                <TextBlock x:Name="textBlock6" Text="Binair" />
                 <TextBox x:Name="BinaryResult" IsReadOnly="True" />
             </StackPanel>
         </StackPanel>
