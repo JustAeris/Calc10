@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Globalization;
-using ModernWpf;
 
 namespace WPFModernUITest
 {
-    class CurrencyConverterClass
+    internal class CurrencyConverterClass
     {
         /// <summary>
         /// Gets all available currency tags
@@ -17,7 +12,7 @@ namespace WPFModernUITest
         {
 
             // Hardcoded currency tags neccesairy to parse the ecb xml's
-            return new string[] {"eur", "usd", "jpy", "bgn", "czk", "dkk", "gbp", "huf", "pln", "ron", "sek", "chf", "isk", "nok", 
+            return new string[] {"eur", "usd", "jpy", "bgn", "czk", "dkk", "gbp", "huf", "pln", "ron", "sek", "chf", "isk", "nok",
                 "hrk", "rub", "try", "aud", "brl", "cad", "cny", "hkd", "idr"
             , "inr", "krw", "mxn", "myr", "nzd", "php", "sgd", "thb", "zar"};
         }
@@ -28,9 +23,14 @@ namespace WPFModernUITest
         public static float GetCurrencyRateInEuro(string currency)
         {
             if (currency.ToLower() == "")
+            {
                 throw new ArgumentException("Invalid Argument! Currency parameter cannot be empty!");
+            }
+
             if (currency.ToLower() == "eur")
+            {
                 throw new ArgumentException("Invalid Argument! Cannot get exchange rate from EURO to EURO");
+            }
 
             try
             {
@@ -88,11 +88,15 @@ namespace WPFModernUITest
         {
             // If currency's are empty abort
             if (from == null || to == null)
+            {
                 return 0;
+            }
 
             // Convert Euro to Euro
             if (from.ToLower() == "eur" && to.ToLower() == "eur")
+            {
                 return amount;
+            }
 
             try
             {

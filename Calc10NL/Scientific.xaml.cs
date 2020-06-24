@@ -1,20 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using WPFModernUITest;
-using Calc10;
-using System.Security.Cryptography;
 
 namespace Calc10
 {
@@ -23,7 +10,7 @@ namespace Calc10
     /// </summary>
     public partial class Scientific : UserControl
     {
-        Calc calc;
+        private Calc calc;
         public Scientific()
         {
             InitializeComponent();
@@ -42,7 +29,7 @@ namespace Calc10
 
         private void ScientificUC_Loaded(object sender, RoutedEventArgs e)
         {
-            var parentWindow = Window.GetWindow(this);
+            Window parentWindow = Window.GetWindow(this);
             calc = parentWindow.FindName("CalcUI") as Calc;
         }
 
@@ -112,7 +99,7 @@ namespace Calc10
                         {
                             int temp = calc.PendingOperation.Text.IndexOf(" ");
                             string temp2 = calc.PendingOperation.Text.Substring(0, temp);
-                            return  Convert.ToDouble(calc.MainTextBox.Text) / 100 * Convert.ToDouble(temp2) ;
+                            return Convert.ToDouble(calc.MainTextBox.Text) / 100 * Convert.ToDouble(temp2);
                         }
                         break;
 
@@ -146,17 +133,17 @@ namespace Calc10
         //First Column
         private void powerButton_Click(object sender, RoutedEventArgs e)
         {
-            calc.MainTextBox.Text = Convert.ToString( ScientificFunctions("pow", calc.MainTextBox.Text) );
+            calc.MainTextBox.Text = Convert.ToString(ScientificFunctions("pow", calc.MainTextBox.Text));
         }
 
         private void cubeButton_Click(object sender, RoutedEventArgs e)
         {
-            calc.MainTextBox.Text = Convert.ToString( ScientificFunctions("cube", calc.MainTextBox.Text) );
+            calc.MainTextBox.Text = Convert.ToString(ScientificFunctions("cube", calc.MainTextBox.Text));
         }
 
         private void powerToXButton_Click(object sender, RoutedEventArgs e)
         {
-            calc.MainTextBox.Text = Convert.ToString( ScientificFunctions("powTo", calc.MainTextBox.Text) );
+            calc.MainTextBox.Text = Convert.ToString(ScientificFunctions("powTo", calc.MainTextBox.Text));
             calc.MainTextBox.Text = "";
         }
 

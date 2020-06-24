@@ -27,9 +27,9 @@
                     <Bold>Calc10</Bold><LineBreak />
                     Gemaakt door Astyr<LineBreak />
                     Ontwikkeld met C# en WPF<LineBreak />
-                    Nederlandse vertaling door <Hyperlink NavigateUri="https://twitter.com/DelightedCat" RequestNavigate="Hyperlink_RequestNavigate_3">@DelightedCat</Hyperlink><LineBreak />
-                    Iconen door <Hyperlink NavigateUri="https://icons8.com" RequestNavigate="Hyperlink_RequestNavigate_1">Icons8</Hyperlink><LineBreak />
-                    RSS feed voor valuta-conversie wordt voorzien door de <Hyperlink NavigateUri="https://www.ecb.europa.eu/home/html/rss.en.html" RequestNavigate="Hyperlink_RequestNavigate_2">ECB</Hyperlink>
+                    Nederlandse vertaling door<Hyperlink NavigateUri="https://twitter.com/DelightedCat" RequestNavigate="Hyperlink_RequestNavigate_3">@DelightedCat</Hyperlink><LineBreak />
+                    Iconen door<Hyperlink NavigateUri="https://icons8.com" RequestNavigate="Hyperlink_RequestNavigate_1">Icons8</Hyperlink><LineBreak />
+                    RSS feed voor valuta-conversie wordt voorzien door de<Hyperlink NavigateUri="https://www.ecb.europa.eu/home/html/rss.en.html" RequestNavigate="Hyperlink_RequestNavigate_2">ECB</Hyperlink>
                 </TextBlock>
             </StackPanel>
 

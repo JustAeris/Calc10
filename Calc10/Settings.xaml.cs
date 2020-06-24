@@ -1,23 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.IO.IsolatedStorage;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using Calc10;
 using ModernWpf;
-using ModernWpf.Controls;
 
 namespace WPFModernUITest
 {
@@ -79,7 +65,7 @@ namespace WPFModernUITest
 
                 string[] lines = { "[Theme]", CurrentTheme, "[Accent Color]", AccentColor };
 
-                var appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+                string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
                 try { Directory.CreateDirectory(appDataPath + "\\Calc10"); }
                 catch { }
 
@@ -92,8 +78,8 @@ namespace WPFModernUITest
         //Custom Hex Code
         private void customHexApplyButton_Click(object sender, RoutedEventArgs e)
         {
-            try 
-            { 
+            try
+            {
                 Color color = (Color)ColorConverter.ConvertFromString(customHexCodeTextBox.Text);
                 ThemeManager.Current.AccentColor = color;
             }
@@ -109,9 +95,13 @@ namespace WPFModernUITest
         private void customHexCodeTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             if (customHexCodeTextBox.Text.Length >= 2)
+            {
                 customHexCodeTextBox.Text = "#" + customHexCodeTextBox.Text.Substring(1);
+            }
             else
+            {
                 customHexCodeTextBox.Text = "#";
+            }
         }
 
     }

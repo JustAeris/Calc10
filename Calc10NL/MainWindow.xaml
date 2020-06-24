@@ -43,35 +43,38 @@
             SelectionFollowsFocus="Enabled">
 
             <ui:NavigationView.MenuItems>
-                <ui:NavigationViewItem Content="Calculator" Icon="Calculator" x:Name="CalcNavView"/>
+                <ui:NavigationViewItem
+                    x:Name="CalcNavView"
+                    Content="Calculator"
+                    Icon="Calculator" />
 
                 <ui:NavigationViewItemSeparator />
 
-                <ui:NavigationViewItem Content="Converteerder" x:Name="ConverterNavView">
+                <ui:NavigationViewItem x:Name="ConverterNavView" Content="Converteerder">
                     <ui:NavigationViewItem.Icon>
                         <ui:BitmapIcon UriSource="Assets/Conversion.png" />
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
 
-                <ui:NavigationViewItem Content="Valuta" x:Name="CurrencyNavView">
+                <ui:NavigationViewItem x:Name="CurrencyNavView" Content="Valuta">
                     <ui:NavigationViewItem.Icon>
                         <ui:BitmapIcon UriSource="Assets/Currency.png" />
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
 
-                <ui:NavigationViewItem Content="Wetenschappelijk" x:Name="ScientificNavView">
+                <ui:NavigationViewItem x:Name="ScientificNavView" Content="Wetenschappelijk">
                     <ui:NavigationViewItem.Icon>
                         <ui:BitmapIcon UriSource="Assets/Scientific.png" />
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
 
-                <ui:NavigationViewItem Content="Programmeur" x:Name="ProgNavView">
+                <ui:NavigationViewItem x:Name="ProgNavView" Content="Programmeur">
                     <ui:NavigationViewItem.Icon>
                         <ui:BitmapIcon UriSource="Assets/Programmer.png" />
                     </ui:NavigationViewItem.Icon>
                 </ui:NavigationViewItem>
 
-                <ui:NavigationViewItem Content="Berekenen Datum" x:Name="DateNavView">
+                <ui:NavigationViewItem x:Name="DateNavView" Content="Berekenen Datum">
                     <ui:NavigationViewItem.Icon>
                         <ui:BitmapIcon UriSource="Assets/Date.png" />
                     </ui:NavigationViewItem.Icon>
@@ -149,7 +152,7 @@
 
                 <local2:Date x:Name="DateUI" Visibility="Hidden" />
 
-                <local2:Programmer x:Name="ProgrammerUI" Visibility="Hidden"/>
+                <local2:Programmer x:Name="ProgrammerUI" Visibility="Hidden" />
 
 
             </Grid>

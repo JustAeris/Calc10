@@ -1,26 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.IO;
+using System.Net;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using WPFModernUITest;
-using ModernWpf.Controls;
-using ModernWpf.Navigation;
-using System.Net;
-using System.IO;
-using ModernWpf;
-using System.Threading;
-using System.Timers;
 using Calc10;
+using ModernWpf;
+using ModernWpf.Controls;
 
 namespace WPFModernUITest
 {
@@ -40,16 +27,18 @@ namespace WPFModernUITest
         {
             try
             {
-                using (var client = new WebClient())
+                using (WebClient client = new WebClient())
                 using (client.OpenRead("http://google.com/generate_204"))
+                {
                     return true;
+                }
             }
             catch
             { return false; }
         }
 
         //Method for reading files 
-        static string ReadSpecificLine(string filePath, int lineNumber)
+        private static string ReadSpecificLine(string filePath, int lineNumber)
         {
             string content = null;
             try
@@ -83,8 +72,8 @@ namespace WPFModernUITest
         //Auto Personalization And More On StartUp
         private void MainWindows_Loaded(object sender, RoutedEventArgs e)
         {
-            var appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
-            var SettingsPath = System.IO.Path.Combine(appDataPath + "\\Calc10\\Settings.ini");
+            string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+            string SettingsPath = System.IO.Path.Combine(appDataPath + "\\Calc10\\Settings.ini");
 
             if (ReadSpecificLine(SettingsPath, 2) == "null")
             {
@@ -168,38 +157,72 @@ namespace WPFModernUITest
         }
 
         //Navigation View Management
-        int SelectedIndex = 0;
+        private int SelectedIndex = 0;
         private void NavigationView_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
         {
             if (NavView.SelectedItem == CalcNavView)
+            {
                 SelectedIndex = 1;
+            }
             else if (NavView.SelectedItem == ConverterNavView)
+            {
                 SelectedIndex = 2;
+            }
             else if (NavView.SelectedItem == CurrencyNavView)
+            {
                 SelectedIndex = 3;
+            }
             else if (NavView.SelectedItem == ScientificNavView)
+            {
                 SelectedIndex = 4;
+            }
             else if (NavView.SelectedItem == ProgNavView)
+            {
                 SelectedIndex = 5;
+            }
             else if (NavView.SelectedItem == DateNavView)
+            {
                 SelectedIndex = 6;
+            }
             else
+            {
                 SelectedIndex = 7;
+            }
 
             if (SelectedIndex == 1)
+            {
                 CustomHeader.Text = " Calculator";
+            }
+
             if (SelectedIndex == 2)
+            {
                 CustomHeader.Text = " Converteerder";
+            }
+
             if (SelectedIndex == 3)
+            {
                 CustomHeader.Text = " Valuta";
+            }
+
             if (SelectedIndex == 4)
+            {
                 CustomHeader.Text = " Wetenschappelijk";
+            }
+
             if (SelectedIndex == 5)
+            {
                 CustomHeader.Text = " Programmeur";
+            }
+
             if (SelectedIndex == 6)
+            {
                 CustomHeader.Text = " Berekenen Datum";
+            }
+
             if (SelectedIndex == 7)
+            {
                 CustomHeader.Text = " Instellingen";
+            }
 
             CalcUI.Visibility = Visibility.Hidden;
             CurrencyUI.Visibility = Visibility.Hidden;
@@ -227,7 +250,9 @@ namespace WPFModernUITest
                 CurrencyUI.Visibility = Visibility.Visible;
                 MainWindows.Height = 600;
                 if (!CheckForInternetConnection())
+                {
                     MessageBox.Show("The Currency Converter won't work without Internet Connection.", "Info", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
             }
             if (SelectedIndex == 4)
             {
@@ -239,7 +264,7 @@ namespace WPFModernUITest
                 ProgrammerUI.Visibility = Visibility.Visible;
                 MainWindows.Height = 500;
             }
-           
+
             if (SelectedIndex == 6)
             {
                 DateUI.Visibility = Visibility.Visible;
@@ -315,7 +340,7 @@ namespace WPFModernUITest
         //ABOUT Window
         private void aboutButton_Click(object sender, RoutedEventArgs e)
         {
-            var newW = new About();
+            About newW = new About();
             newW.Show(); // works
         }
     }

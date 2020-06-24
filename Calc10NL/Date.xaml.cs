@@ -1,17 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Calc10
 {
@@ -20,7 +11,7 @@ namespace Calc10
     /// </summary>
     public partial class Date : UserControl
     {
-        int[] comboBoxList = Enumerable.Range(0, 999).ToArray();
+        private readonly int[] comboBoxList = Enumerable.Range(0, 999).ToArray();
 
         public Date()
         {
@@ -29,7 +20,7 @@ namespace Calc10
         //LOAD
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
-            foreach (var num in comboBoxList)
+            foreach (int num in comboBoxList)
             {
                 yearSelectComboBox.Items.Add(num);
                 monthSelectComboBox.Items.Add(num);
@@ -49,10 +40,10 @@ namespace Calc10
 
             if (fromDate.SelectedDate != null && toDate.SelectedDate != null)
             {
-                var fromdate = (DateTime)fromDate.SelectedDate;
-                var todate = (DateTime)toDate.SelectedDate;
+                DateTime fromdate = (DateTime)fromDate.SelectedDate;
+                DateTime todate = (DateTime)toDate.SelectedDate;
 
-                var ts = Convert.ToInt32(Math.Abs((todate - fromdate).TotalDays));
+                int ts = Convert.ToInt32(Math.Abs((todate - fromdate).TotalDays));
 
                 if (ts < 7)
                 {
@@ -78,23 +69,27 @@ namespace Calc10
                 }
 
                 if (week == 0 && month == 0 && year == 0)
+                {
                     diffDate.Text = ts + " Dag(en)";
+                }
                 else
+                {
                     diffDate.Text = removeUselessNumbers(day, week, month, year) + " Of " + ts + " Totaal Aantal Dagen";
+                }
             }
         }
 
         private void toDate_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
             int day = 0, week = 0, month = 0, year = 0;
-            
+
 
             if (fromDate.SelectedDate != null && toDate.SelectedDate != null)
             {
-                var fromdate = (DateTime)fromDate.SelectedDate;
-                var todate = (DateTime)toDate.SelectedDate;
+                DateTime fromdate = (DateTime)fromDate.SelectedDate;
+                DateTime todate = (DateTime)toDate.SelectedDate;
 
-                var ts = Convert.ToInt32(Math.Abs((todate - fromdate).TotalDays));
+                int ts = Convert.ToInt32(Math.Abs((todate - fromdate).TotalDays));
 
                 if (ts < 7)
                 {
@@ -120,10 +115,13 @@ namespace Calc10
                 }
 
                 if (week == 0 && month == 0 && year == 0)
+                {
                     diffDate.Text = ts + " Dag(en)";
+                }
                 else
+                {
                     diffDate.Text = removeUselessNumbers(day, week, month, year) + " Of " + ts + " Totaal Aantal Dagen";
-
+                }
             }
         }
         private string removeUselessNumbers(int day, int week, int month, int year)
@@ -131,37 +129,60 @@ namespace Calc10
             string result = "", dayStr = "", weekStr = "", monthStr = "", yearStr = "";
 
             if (day == 1)
+            {
                 dayStr = day + " Dag";
+            }
             else if (day != 0)
+            {
                 dayStr = day + " Dagen";
+            }
 
             if (week == 1)
+            {
                 weekStr = week + " Week";
+            }
             else if (week != 0)
+            {
                 weekStr = week + " Weeks";
+            }
 
             if (month == 1)
+            {
                 monthStr = month + " Maand";
+            }
             else if (month != 0)
+            {
                 monthStr = month + " Maanden";
+            }
 
             if (year == 1)
+            {
                 yearStr = year + " Jaar";
+            }
             else if (year != 0)
+            {
                 yearStr = year + " Jaren";
+            }
 
             if (day != 0)
+            {
                 result = dayStr;
+            }
 
             if (week != 0)
+            {
                 result = weekStr + "; " + result;
+            }
 
             if (month != 0)
+            {
                 result = monthStr + "; " + result;
+            }
 
             if (year != 0)
+            {
                 result = yearStr + "; " + result;
-
+            }
 
             return result;
         }
@@ -173,10 +194,13 @@ namespace Calc10
             addSub.Visibility = Visibility.Hidden;
 
             if (Selection.SelectedIndex == 0)
+            {
                 difference.Visibility = Visibility.Visible;
+            }
             else
+            {
                 addSub.Visibility = Visibility.Visible;
-
+            }
         }
         //DIFFERENCE SECTION END
 

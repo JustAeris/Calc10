@@ -1,18 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Forms;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Calc10
 {
@@ -42,11 +32,10 @@ namespace Calc10
                 BinaryResult.Text = "";
             }
 
-            long l = 0;
             string s = numberTextBox.Text;
-            bool numOnly = Int64.TryParse(s, out l);
+            bool numOnly = long.TryParse(s, out long l);
 
-            try { long l2 = Int64.Parse(s, System.Globalization.NumberStyles.HexNumber); numOnly = true; }
+            try { long l2 = long.Parse(s, System.Globalization.NumberStyles.HexNumber); numOnly = true; }
             catch { numOnly = false; }
 
             if (numOnly == true)
@@ -54,18 +43,22 @@ namespace Calc10
                 string dec = "", hex = "", oct = "", bin = "";
                 long n = 0;
 
-                try 
-                { 
+                try
+                {
                     if (numberType.SelectedIndex == 1)
-                        n = Int64.Parse(s, System.Globalization.NumberStyles.HexNumber); 
+                    {
+                        n = long.Parse(s, System.Globalization.NumberStyles.HexNumber);
+                    }
                     else if (!string.IsNullOrEmpty(numberTextBox.Text))
+                    {
                         n = Convert.ToInt64(numberTextBox.Text);
+                    }
                 }
                 catch
                 {
                 }
 
-               
+
 
 
                 try
@@ -117,7 +110,7 @@ namespace Calc10
                 }
                 catch
                 {
-                    DialogResult result = (DialogResult)System.Windows.MessageBox.Show($"Invalid Value !\nValue must not be higher than {Int64.MaxValue} Decimal\nAllowed Characters for each value :\nDecimal: 1 2 3 4 5 6 7 8 9 0\nHexadecimal : 1 2 3 4 5 6 7 8 9 0 A B C D E F\n /!\\ (Length must not exceed 6)\nOctal : 1 2 3 4 5 6 7 0\nBinary : 1 0\n\nClear TextBox ?", "Error",
+                    DialogResult result = (DialogResult)System.Windows.MessageBox.Show($"Invalid Value !\nValue must not be higher than {long.MaxValue} Decimal\nAllowed Characters for each value :\nDecimal: 1 2 3 4 5 6 7 8 9 0\nHexadecimal : 1 2 3 4 5 6 7 8 9 0 A B C D E F\n /!\\ (Length must not exceed 6)\nOctal : 1 2 3 4 5 6 7 0\nBinary : 1 0\n\nClear TextBox ?", "Error",
                         MessageBoxButton.YesNo, MessageBoxImage.Warning);
 
                     if (result == DialogResult.Yes)
@@ -128,11 +121,13 @@ namespace Calc10
                         OctalResult.Text = "";
                         BinaryResult.Text = "";
                     }
-                        
+
                 }
             }
             else
+            {
                 numberTextBox.Text = "";
+            }
         }
 
         private void numberType_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -145,11 +140,10 @@ namespace Calc10
                 BinaryResult.Text = "";
             }
 
-            long l = 0;
             string s = numberTextBox.Text;
-            bool numOnly = Int64.TryParse(s, out l);
+            bool numOnly = long.TryParse(s, out long l);
 
-            try { long l2 = Int64.Parse(s, System.Globalization.NumberStyles.HexNumber); numOnly = true; }
+            try { long l2 = long.Parse(s, System.Globalization.NumberStyles.HexNumber); numOnly = true; }
             catch { numOnly = false; }
 
             if (numOnly == true)
@@ -160,9 +154,13 @@ namespace Calc10
                 try
                 {
                     if (numberType.SelectedIndex == 1)
-                        n = Int64.Parse(s, System.Globalization.NumberStyles.HexNumber);
+                    {
+                        n = long.Parse(s, System.Globalization.NumberStyles.HexNumber);
+                    }
                     else if (!string.IsNullOrEmpty(numberTextBox.Text))
+                    {
                         n = Convert.ToInt64(numberTextBox.Text);
+                    }
                 }
                 catch
                 {
@@ -220,7 +218,7 @@ namespace Calc10
                 }
                 catch
                 {
-                    DialogResult result = (DialogResult)System.Windows.MessageBox.Show($"Invalid Value !\nValue must not be higher than {Int64.MaxValue} Decimal\nAllowed Characters for each value :\nDecimal: 1 2 3 4 5 6 7 8 9 0\nHexadecimal : 1 2 3 4 5 6 7 8 9 0 A B C D E F\n /!\\ (Length must not exceed 6)\nOctal : 1 2 3 4 5 6 7 0\nBinary : 1 0\n\nClear TextBox ?", "Error",
+                    DialogResult result = (DialogResult)System.Windows.MessageBox.Show($"Invalid Value !\nValue must not be higher than {long.MaxValue} Decimal\nAllowed Characters for each value :\nDecimal: 1 2 3 4 5 6 7 8 9 0\nHexadecimal : 1 2 3 4 5 6 7 8 9 0 A B C D E F\n /!\\ (Length must not exceed 6)\nOctal : 1 2 3 4 5 6 7 0\nBinary : 1 0\n\nClear TextBox ?", "Error",
                         MessageBoxButton.YesNo, MessageBoxImage.Warning);
 
                     if (result == DialogResult.Yes)
@@ -235,7 +233,9 @@ namespace Calc10
                 }
             }
             else
+            {
                 numberTextBox.Text = "";
+            }
         }
 
 
