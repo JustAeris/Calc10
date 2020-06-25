@@ -1,0 +1,83 @@
+Yo Poland
+[Polish][YourSenseiCreeper][https://github.com/YourSenseiCreeper]
+
+Kalkulator, Naukowy
+
+
+# Konwerter
+Wybierz typ jednostki
+Wprowadź jednostkę KTÓRĄ chcesz zamienić
+Wprowadź jednostkę NA KTÓRĄ chcesz zamienić
+Zamień
+Kąt, Dane, Energia, Czas, Długość, Moc, Ciśnienie, Prędkość, Powierzchnia, Temperatura, Objętość, Waga
+Kątów, Radianów, Gradów
+Bitów, Bajtów, Kilobitów, Kilobajtów, Megabitów, Megabajtów, Gigabitów, Gigabajtów, Terabitów, Terabajtów, Petabitów, Petabajtów, Exabitów, Exabajtów, Zettabitów, Zettabajtów, Yottabitów, Yottabajtów
+Dżuli, Kilodżuli, Kilokalorii (Kcal)
+Mikrosekunda, Milisekunda, Sekunda, Minuta, Godzina, Dzień, Tydzień, Miesiąc, Rok
+Nanometrów, Mikrometrów, Milimetrów, Centymetrów, Metrów, Kilometrów, Cali, Stóp, Jardów
+Watów, Kilowatów
+Atmosfer, Barów, Pascali
+Centymetrów na Sekundę, Metrów na Sekundę, Kilometrów na Godzinę, Mil na Godzinę, Machów
+Milimetrów kwadratowych, Centymetrów Kwadratowych, Metrów Kwadratowych, Hektarów, Kilometrów Kwadratowych, Cali Kwadratowych, Stóp Kwadratowych, Jardów Kwadratowych, Mil Kwadratowych
+Stopni Celsjusza, Fahrenheitów, Kelvinów
+Mililitrów, Centymetrów Sześciennych, Litrów, Metrów Sześciennych, Galonów, Cali Sześciennych, Stóp Sześciennych
+Miligramów, Centygramów, Decygramów, Gramów, Dekagramów, Hektogramów, Kilogramów, Ton, Uncji, Funtów, Ton (US)
+
+
+# Waluty
+Waluta KTÓRĄ chcesz zamienić
+ILOŚĆ waluty
+Waluta NA KTÓRĄ chcesz zamienić
+Zamień
+Dostępne waluty
+
+
+# Tryb programisty
+Dziesiętny
+Szestnastkowy
+Ósemkowy
+Binarny
+Wprowadź liczbę
+
+
+# Obliczanie dat
+Różnica dat
+Od
+Do
+Różnica
+Lub x Dni w ogóle
+Dodaj lub Odejmij
+Wybierz datę
+Dodaj
+Odejmij
+Dzień / Dni
+Tydzień / Tygodnie
+Miesiąc / Miesiące
+Rok / Lata
+Wynik
+
+
+#Ustawienia
+Motyw
+Ciemny
+Jasny
+Domyślny
+Wybierz Kolor Akcentu
+Użyj własnego koloru ARGB Hex
+Zastosuj
+
+
+# Tryb podręczny
+W tym miejscu możesz bezpośrednio wpisać wyrażenie i kliknąć Enter, aby otrzymać wynik.
+Dostępne symbole
+
+
+# O programie
+Stworzony przez (Astyr)
+Napisany w C# oraz WPF
+Ikony wzięte z (Icons8)
+RSS feed dla konwertera walut dostarczone przez ECB
+
+Ten projekt jest na licencji GNU GPL 3, kliknij, aby dowiedzieć się więcej
+
+Zamknij
