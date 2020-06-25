@@ -1,0 +1,75 @@
+﻿<UserControl
+    x:Class="WPFModernUITest.Settings"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:WPFModernUITest"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sc="clr-namespace:SamplesCommon;assembly=SamplesCommon"
+    xmlns:ui="http://schemas.modernwpf.com/2019"
+    x:Name="SettingsUIUC"
+    Width="200"
+    Height="700"
+    mc:Ignorable="d">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <GroupBox Header="Motyw">
+                <StackPanel Orientation="Vertical">
+                    <RadioButton
+                        x:Name="DarkTheme"
+                        Click="DarkTheme_Click"
+                        Content="Ciemny" />
+                    <RadioButton
+                        x:Name="LightTheme"
+                        Click="LightTheme_Click"
+                        Content="Jasny" />
+                    <RadioButton
+                        x:Name="DefaultTheme"
+                        Click="DefaultTheme_Click"
+                        Content="Domyślny"
+                        IsChecked="True" />
+                </StackPanel>
+            </GroupBox>
+
+            <ui:DropDownButton Content="Wybierz Kolor Akcentu">
+                <ui:DropDownButton.Flyout>
+                    <ui:Flyout
+                        x:Name="AccentColorFlyout"
+                        Closed="AccentColorFlyout_Closed"
+                        Placement="Bottom">
+                        <StackPanel Orientation="Vertical">
+                            <sc:AccentColorPicker x:Name="AccentColorPicker" />
+                            <StackPanel Orientation="Horizontal">
+                                <ui:DropDownButton
+                                    Margin="132,-62,0,0"
+                                    Click="DropDownButton_Click"
+                                    Content="Użyj własnego koloru ARGB Hex">
+                                    <ui:DropDownButton.Flyout>
+                                        <ui:Flyout Placement="Bottom">
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBox
+                                                    x:Name="customHexCodeTextBox"
+                                                    Width="150"
+                                                    CharacterCasing="Upper"
+                                                    MaxLength="9"
+                                                    Text="#"
+                                                    TextChanged="customHexCodeTextBox_TextChanged" />
+                                                <Button
+                                                    x:Name="customHexApplyButton"
+                                                    Margin="10,0,0,0"
+                                                    Click="customHexApplyButton_Click"
+                                                    Content="Zastosuj" />
+                                            </StackPanel>
+                                        </ui:Flyout>
+                                    </ui:DropDownButton.Flyout>
+                                </ui:DropDownButton>
+                            </StackPanel>
+                        </StackPanel>
+                    </ui:Flyout>
+                </ui:DropDownButton.Flyout>
+            </ui:DropDownButton>
+        </StackPanel>
+
+
+    </Grid>
+</UserControl>
