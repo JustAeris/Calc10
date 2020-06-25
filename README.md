@@ -62,4 +62,4 @@ In *Calc10*, you can actually change the theme and the accent color. Those setti
 
 
 ### Greetings
-To [AshenXRequiem](https.//github.com/ashenxrequiem) for helping me a lot with this project and to [DelightedCat](https://twitter.com/DelightedCat) for the Dutch translation.
+To [AshenXRequiem](https.//github.com/ashenxrequiem) for helping me a lot with this project, to [DelightedCat](https://twitter.com/DelightedCat) for the Dutch translation and to [YourSenseiCreeper](https://github.com/YourSenseiCreeper) for the Polish translation.
