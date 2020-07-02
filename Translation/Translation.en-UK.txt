@@ -14,10 +14,10 @@ Degrees, Radians, Grades
 Bits, Octet, Kilobit, Kilo-octet / Kilobyte, Megabit, Megaoctet / Megabyte, Gigabit, Gigaoctet / Gigabyte, Terabit, Teraoctet / Terabyte, Petabit, Petaoctet / Petabyte, Exabit, Exaoctet / Exabyte, Zettabit, Zettaoctet / Zettabyte, Yottabit, Yottaoctet / Yottabyte
 Joule, Kilojoule, Food Calorie (Kcal)
 Microsecond, Millisecond, Second, Minute, Hour, Day, Week, Month, Year
-Nanometre, Micrometre, Millimetre, Centimetre ,Metre, Kilometre, Inches, Foot, Yard, Mile};
+Nanometre, Micrometre, Millimetre, Centimetre ,Metre, Kilometre, Inches, Foot, Yard, Mile
 Watt, Kilowatt
 Atmosphere, Bar, Pascal
-Centimetre per Second, Metre per Second, Kilometre per Hour, Miles per Hour, Mach};
+Centimetre per Second, Metre per Second, Kilometre per Hour, Miles per Hour, Mach
 Square Millimetre, Square Centimetre, Square Metre, Hectare, Square Kilometre, Square Inch, Square Foot, Square Yard, Square Mile,
 Celsuis, Fahrenheit, Kelvin
 Millilitre, Cubic Centimetre, Litre, Cubic Metre, Gallon, Cubic Inch, Cubic Foot
@@ -57,7 +57,7 @@ Year / Years
 Date Result
 
 
-#Settings
+# Settings
 Theme
 Dark
 Light
