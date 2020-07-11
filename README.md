@@ -55,7 +55,7 @@ The minimal is a great addition, when enabled, it creates a little window with a
 
 
 ## Settings
-In *Calc10*, you can actually change the theme and the accent color. Those settings are saved in `AppData\Local\Calc10\Settings.ini` but you shouldn't need to go there. To use the custom accent color option, you'll need a ARGB Hex code, made of a # and 8 characters after, example `#FF008FFF`.
+In *Calc10*, you can actually change the theme and the accent color. Those settings are saved in `AppData\Local\Calc10\Settings.ini` but you shouldn't need to go there. To use the custom accent color option, you'll need a ARGB Hex code, made of a `#` and 8 characters after, example `#FF008FFF`.
 
 ![alt text](https://bit.ly/3dsf4ju) ![alt text](https://bit.ly/37QYTvc) ![alt text](https://bit.ly/3dtOWF7)
 
